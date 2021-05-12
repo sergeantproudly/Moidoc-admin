@@ -1,0 +1,182 @@
+.dashboard
+    background: #FAFDFC
+    padding: 25px 50px
+    &__chart
+        width: 100%
+        &_1
+            height: 300px
+        &_2
+            height: 200px
+        &_3
+            height: 200px
+    &__ratings-summ
+        &__stars
+            display: inline-block
+            margin: 0 10px 0 0
+            vertical-align: middle
+            &__star
+                display: inline-block
+                margin: 0 1.5px 0 0
+        &__text
+            color: #3D5055
+            display: inline-block
+            vertical-align: middle
+        &__separator
+            margin: 0 10px
+            display: inline-block
+            vertical-align: middle
+            height: 16px
+            background: #E8ECEB
+            width: 1px
+    &__section
+        height: 100%
+        &__head
+            display: flex
+            align-items: center
+            align-content: center
+            justify-content: space-between
+            flex-wrap: wrap
+            margin: 0 0 18px 0
+        &__title
+            font-size: 26px
+        &__shell
+            box-shadow: 0px 4px 8px -5px #97AFA7
+            padding: 20px 30px
+            background: #fff
+            border-radius: 9px
+            height: 100%
+    &__widget
+        border: 1px solid #E8ECEB
+        border-radius: 6px
+        padding: 20px
+        &__name
+            font-size: 10px
+            text-transform: uppercase
+            color: #98A2A7
+            margin: 0 0 6px 0
+        &__bottom
+            display: flex
+            justify-content: space-between
+            align-items: center
+            align-content: center
+        &__number
+            font-weight: 500
+            font-size: 22px
+            color: #3D5055
+        &__different
+            font-size: 16px
+            line-height: 22px
+            &_minus
+                color: #D75161
+            &_plus
+                color: #70C9B9
+    &__ratings
+        &__line
+            display: flex
+            align-items: center
+            align-content: center
+            justify-content: flex-start
+            margin: 0 0 20px 0
+            &:last-child
+                margin: 0
+            &__number
+                width: 30px
+            &__visual 
+                width: calc(100% - 75px)
+                background: var(--lightteal)
+                height: 17px
+                border-radius: 50px
+                &__progress
+                    background: var(--teal)
+                    height: 100%
+                    border-radius: 50px
+            &__percent
+                width: 45px
+                padding: 0 0 0 15px
+    &__reviews-all
+        color: var(--teal)
+    &__reviews
+        &__review
+            border-top: 1px solid #E8ECEB
+            padding: 16px 0 0 0
+            margin: 0 0 16px 0
+            &:last-child
+                margin: 0
+            &__name
+                display: inline-block
+                margin: 0 10px 0 0
+                font-size: 16px
+            &__stars
+                display: inline-block
+                margin: 0 10px 0 0
+                &__star
+                    display: inline-block
+                    margin: 0 2px 0 0
+            &__time
+                display: inline-block
+                color: #98A2A7
+            &__text
+                margin: 4px 0 0 0
+                font-style: italic
+    &__specialties
+        &__head
+            font-size: 10px
+            text-transform: uppercase
+            color: #98A2A7
+        &__line
+            display: flex
+            align-items: flex-start
+            align-content: flex-start
+            justify-content: flex-start
+            padding: 0 0 12px 0
+            margin: 0 0 12px 0
+            border-bottom: 1px solid #E8ECEB
+            &:last-child
+                margin: 0
+                border-bottom: none
+        &__column
+            &_1
+                width: 45%
+            &_2
+                width: 20%
+            &_3
+                width: 35%
+        &__name
+            font-size: 16px
+        &__number
+            display: inline-block
+            vertical-align: middle
+            margin: 0 10px 0 0
+        &__visual 
+            width: 35px
+            background: var(--lightteal)
+            height: 17px
+            border-radius: 50px
+            display: inline-block
+            vertical-align: middle
+            &__progress
+                background: var(--teal)
+                height: 100%
+                border-radius: 50px 0 0 50px
+
+@media (max-width: #{$md}px)
+    .dashboard
+        padding: 15px 15px
+        &__widget
+            margin: 0 0 15px 0
+        &__section
+            margin: 0 0 15px 0
+            &__shell
+                padding: 15px 15px
+        &__specialties
+            &__column
+                &_1
+                    width: calc(100% - 120px)
+                &_2
+                    width: 60px
+                &_3
+                    width: 60px
+            &__number
+                margin: 0
+            &__visual 
+                display: none
