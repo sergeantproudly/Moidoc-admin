@@ -90,10 +90,14 @@ $widthSidebarXS: 260
         background: transparent
         display: block
         color: #3D5055
+        transition: 0.3s
         &:hover
             background: var(--teal)
             color: #fff
             cursor: pointer
+        &:active
+            background: var(--strongteal)
+            border: 1px solid var(--strongteal)
     &__logout
         color: rgba(61, 80, 85, 0.5)
         padding: 16px 28px
@@ -165,13 +169,15 @@ $widthSidebarXS: 260
                 display: none
 @media (max-width: #{$md}px)
     .skeleton
-        &__headline
-            display: none
         &__right
             &__head
                 padding: 0 15px
+        &__headline
+            padding: 0
 @media (max-width: #{$xs}px)
     .skeleton
+        &__headline
+            display: none
         &__right
             &__head
                 min-height: 50px

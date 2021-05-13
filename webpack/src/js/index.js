@@ -23,6 +23,9 @@ var myChart1 = new Chart(myChartNode1, {
                 data: [120000, 19000, 30000, 50000, 20000, 30000, 30000],
                 lineTension: 0.3,   
                 borderColor: '#FFB84E',
+                backgroundColor: [
+                    'rgba(255,255,255,0)',
+                ],
                 borderWidth: 3
             },
             {
@@ -30,6 +33,9 @@ var myChart1 = new Chart(myChartNode1, {
                 data: [190000, 30000, 50000, 20000, 30000, 30000, 120000],
                 lineTension: 0.3,   
                 borderColor: '#A86E9E',
+                backgroundColor: [
+                    'rgba(255,255,255,0)',
+                ],
                 borderWidth: 3
             },
             {
@@ -37,6 +43,9 @@ var myChart1 = new Chart(myChartNode1, {
                 data: [190000, 30000, 30000, 50000, 20000, 30000, 120000],
                 lineTension: 0.3,   
                 borderColor: '#59BAD9',
+                backgroundColor: [
+                    'rgba(255,255,255,0)',
+                ],
                 borderWidth: 3
             }
         ]
@@ -59,9 +68,9 @@ var myChart2 = new Chart(myChartNode2, {
             label: '# of Votes',
             data: [12, 19, 3],
             backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
+                '#FFB84E',
+                '#59BAD9',
+                '#A86E9E',
             ],
         }]
     },
@@ -85,10 +94,10 @@ var myChart3 = new Chart(myChartNode3, {
                 label: 'компьютер',
                 data: [12, 19, 3, 5, 2, 3, 3],
                 backgroundColor: [
-                    'rgba(54, 162, 235, 0.2)',
+                    '#70C9B9',
                 ],
                 borderColor: [
-                    'rgba(54, 162, 235, 1)',
+                    '#70C9B9',
                 ],
                 borderWidth: 1
             },
@@ -96,10 +105,10 @@ var myChart3 = new Chart(myChartNode3, {
                 label: 'смартфон',
                 data: [19, 3, 5, 2, 3, 3, 12],
                 backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(112, 201, 185, 0.6)',
                 ],
                 borderColor: [
-                    'rgba(255, 99, 132, 1)',
+                    'rgba(112, 201, 185, 0.6)',
                 ],
                 borderWidth: 1
             },

@@ -28,6 +28,5 @@
     "compression-webpack-plugin": "^1.1.12",
     "terser-webpack-plugin": "^3.0.1"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
