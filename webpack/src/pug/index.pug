@@ -140,20 +140,59 @@ block content
                                             .information-about-polyclinics__labels__label medica24.ru
                                     .information-about-polyclinics__actions
                                         button.btn Редактировать
-                                .information-about-polyclinics__separate
-                                button.btn Неделя
+                                .information-about-polyclinics__filter
+                                    .toggles
+                                        button.toggles__toggle.toggles__toggle_active Неделя
+                                        button.toggles__toggle Месяц
+                                    .information-about-polyclinics__filter__label
+                                        .information-about-polyclinics__filter__label__name Период с
+                                        .information-about-polyclinics__filter__label__input-placeholder
                             .dashboard
                                 .row
                                     .col-lg-8.mb-4
                                         .dashboard__section
                                             .dashboard__section__shell
+                                                .dashboard__revenue
+                                                    .dashboard__revenue__label
+                                                        .dashboard__revenue__label__name доходы итого
+                                                        .dashboard__revenue__label__summ 87 600.00 ₽
+                                                    .dashboard__revenue__label
+                                                        .dashboard__revenue__label__name.dashboard__revenue__label__name_green 
+                                                            span Онлайн приемы
+                                                        .dashboard__revenue__label__summ 22 000.00 ₽
+                                                    .dashboard__revenue__label
+                                                        .dashboard__revenue__label__name.dashboard__revenue__label__name_purple 
+                                                            span Очные приемы
+                                                        .dashboard__revenue__label__summ 46 000.00 ₽
+                                                    .dashboard__revenue__label
+                                                        .dashboard__revenue__label__name.dashboard__revenue__label__name_orange 
+                                                            span Вызов на дом
+                                                        .dashboard__revenue__label__summ 19 600.00 ₽
                                                 <canvas class="dashboard__chart dashboard__chart_1" id="myChart1"></canvas>
                                     .col-lg-4.mb-4
                                         .dashboard__section
                                             .dashboard__section__shell
                                                 .dashboard__section__head
                                                     .dashboard__section__title Записи
-                                                <canvas class="dashboard__chart dashboard__chart_2" id="myChart2"></canvas>
+                                                .dashboard__summ
+                                                    <canvas class="dashboard__chart dashboard__chart_2" id="myChart2"></canvas>
+                                                    .dashboard__summ__center 234
+                                                .dashboard__records
+                                                    .dashboard__records__label
+                                                        .dashboard__records__label__name.dashboard__records__label__name_green Онлайн прием
+                                                        .dashboard__records__label__right
+                                                            span.dashboard__records__label__abs 48
+                                                            span.dashboard__records__label__percent.dashboard__records__label__percent_minus -12%
+                                                    .dashboard__records__label
+                                                        .dashboard__records__label__name.dashboard__records__label__name_purple Очный прием
+                                                        .dashboard__records__label__right
+                                                            span.dashboard__records__label__abs 39
+                                                            span.dashboard__records__label__percent.dashboard__records__label__percent_plus +6%
+                                                    .dashboard__records__label
+                                                        .dashboard__records__label__name.dashboard__records__label__name_orange Вызов на дом
+                                                        .dashboard__records__label__right
+                                                            span.dashboard__records__label__abs 16
+                                                            span.dashboard__records__label__percent.dashboard__records__label__percent_plus +28%
                                     .col-lg-12.mb-4
                                         .dashboard__section
                                             .dashboard__section__shell
@@ -313,5 +352,8 @@ block content
                                             .dashboard__section__shell
                                                 .dashboard__section__head
                                                     .dashboard__section__title Источники записей
+                                                    .dashboard__devices
+                                                        .dashboard__devices__label.dashboard__devices__label_desktop компьютер
+                                                        .dashboard__devices__label.dashboard__devices__label_phone смартфон
                                                 <canvas class="dashboard__chart dashboard__chart_3" id="myChart3"></canvas>
                 

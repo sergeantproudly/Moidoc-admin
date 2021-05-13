@@ -1,12 +1,125 @@
 .dashboard
     background: #FAFDFC
     padding: 25px 50px
+    &__summ
+        position: relative
+        &__center
+            position: absolute
+            left: 50%
+            top: 50%
+            transform: translate(-50%, -50%)
+            font-weight: 500
+            font-size: 22px
+    &__devices
+        &__label
+            display: inline-flex
+            align-items: center
+            align-content: center
+            margin: 0 12px 0 0
+            &::before
+                content: ""
+                width: 12px
+                height: 12px
+                border-radius: 50%
+                background: #eee
+                display: inline-block
+                margin: 0 8px 0 0
+            &_desktop::before
+                background: #70C9B9
+                opacity: 0.6
+            &_phone::before
+                background: #70C9B9
+    &__records
+        margin: 20px 0 0 0
+        padding: 16px 0 0 0
+        border-top: 1px solid #E8ECEB
+        &__label
+            display: flex
+            justify-content: space-between
+            align-content: center
+            align-items: center
+            margin: 0 0 20px 0
+            &:last-child
+                margin: 0
+            &__name
+                display: flex
+                align-items: center
+                align-content: center
+                font-size: 13px
+                &_green,
+                &_purple,
+                &_orange
+                    &::before
+                        content: ""
+                        width: 12px
+                        height: 12px
+                        border-radius: 50%
+                        background: #eee
+                        display: inline-block
+                        margin: 0 11px 0 0
+                &_green::before
+                    background: #59BAD9
+                &_purple::before
+                    background: #A86E9E
+                &_orange::before
+                    background: #FFB84E
+            &__right
+                display: flex
+                align-items: center
+                align-content: center
+                width: 25%
+            &__abs
+                font-size: 16px
+                margin: 0 6px 0 0 
+                color: #3D5055
+            &__percent
+                font-size: 12px
+                transform: translateY(5%)
+                &_minus
+                    color: #D75161
+                &_plus
+                    color: #70C9B9
+    &__revenue
+        margin: 0 0 11px 0
+        &__label
+            display: inline-block
+            margin: 0 25px 5px 0
+            &__name
+                font-weight: bold
+                font-size: 10px
+                color: #98A2A7
+                margin: 0 0 3px 0
+                display: flex
+                align-items: center
+                align-content: center
+                text-transform: uppercase
+                &_green,
+                &_purple,
+                &_orange
+                    &::before
+                        content: ""
+                        width: 12px
+                        height: 12px
+                        border-radius: 50%
+                        background: #eee
+                        display: inline-block
+                        margin: 0 8px 0 0
+                &_green::before
+                    background: #59BAD9
+                &_purple::before
+                    background: #A86E9E
+                &_orange::before
+                    background: #FFB84E
+            &__summ 
+                font-weight: 500
+                font-size: 22px
     &__chart
         width: 100%
         &_1
             height: 300px
         &_2
-            height: 200px
+            width: 151px
+            margin: 0 auto
         &_3
             height: 200px
     &__ratings-summ
@@ -131,8 +244,8 @@
             align-items: flex-start
             align-content: flex-start
             justify-content: flex-start
-            padding: 0 0 12px 0
-            margin: 0 0 12px 0
+            padding: 0 0 18px 0
+            margin: 0 0 18px 0
             border-bottom: 1px solid #E8ECEB
             &:last-child
                 margin: 0

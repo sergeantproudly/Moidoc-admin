@@ -4,8 +4,12 @@
     <meta charset="utf-8">
     <title>Админ-панель Мой Доктор</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="/favicon.ico?v-1620846192546"><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link href="/assets/css/main.css?v-1620846192546" rel="stylesheet">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="icon" sizes="16x16 32x32 64x64" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="/assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/assets/favicon/safari-pinned-tab.svg&quot; color=&quot;#5bbad5"><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="/assets/css/main.css?v-1620917697791" rel="stylesheet">
   </head>
   <body>
     <div class="container-fluid">
@@ -81,7 +85,7 @@
             <div class="skeleton__right__head skeleton__head_right">
               <div class="skeleton__right__side">
                 <button class="skeleton__burger" onclick="toggleMobileMenu(this)"><span class="skeleton__burger__line"></span></button>
-                <p class="skeleton__headline">Медицина 24/7 Медицина 24/7 Медицина 24/7 Медицина 24/7 Медицина 24/7 Медицина 24/7 Медицина 24/7 Медицина 24/7 Медицина 24/7 Медицина 24/7 Медицина 24/7 Медицина 24/7</p>
+                <p class="skeleton__headline">Медицина 24/7</p>
               </div>
               <div class="skeleton__right__side"><a class="skeleton__logout skeleton__logout_mobile" href="#">
                    <svg class="skeleton__logout__icon" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -98,7 +102,7 @@
                     <div class="information-about-polyclinics__name">Медицина 24/7</div>
                     <div class="information-about-polyclinics__labels">
                       <div class="information-about-polyclinics__labels__label">Россия, Зеленоград, Панфиловский пр-т, 10З, GMT+3</div>
-                      <div class="information-about-polyclinics__labels__label">+7 (966) 192-32-31</div>
+                      <div class="information-about-polyclinics__labels__label">+7&nbsp;(966)&nbsp;192‑32‑31</div>
                       <div class="information-about-polyclinics__labels__label">info@medica24.ru</div>
                       <div class="information-about-polyclinics__labels__label">medica24.ru</div>
                     </div>
@@ -107,14 +111,41 @@
                     <button class="btn">Редактировать</button>
                   </div>
                 </div>
-                <div class="information-about-polyclinics__separate"></div>
-                <button class="btn">Неделя</button>
+                <div class="information-about-polyclinics__filter">
+                  <div class="toggles">
+                    <button class="toggles__toggle toggles__toggle_active">Неделя</button>
+                    <button class="toggles__toggle">Месяц</button>
+                  </div>
+                  <div class="information-about-polyclinics__filter__label">
+                    <div class="information-about-polyclinics__filter__label__name">Период с</div>
+                    <div class="information-about-polyclinics__filter__label__input-placeholder"></div>
+                  </div>
+                </div>
               </div>
               <div class="dashboard">
                 <div class="row">
                   <div class="col-lg-8 mb-4">
                     <div class="dashboard__section">
-                      <div class="dashboard__section__shell"><canvas class="dashboard__chart dashboard__chart_1" id="myChart1"></canvas></div>
+                      <div class="dashboard__section__shell">
+                        <div class="dashboard__revenue">
+                          <div class="dashboard__revenue__label">
+                            <div class="dashboard__revenue__label__name">доходы итого</div>
+                            <div class="dashboard__revenue__label__summ">87 600.00 ₽</div>
+                          </div>
+                          <div class="dashboard__revenue__label">
+                            <div class="dashboard__revenue__label__name dashboard__revenue__label__name_green"> <span>Онлайн приемы</span></div>
+                            <div class="dashboard__revenue__label__summ">22 000.00 ₽</div>
+                          </div>
+                          <div class="dashboard__revenue__label">
+                            <div class="dashboard__revenue__label__name dashboard__revenue__label__name_purple"> <span>Очные приемы</span></div>
+                            <div class="dashboard__revenue__label__summ">46 000.00 ₽</div>
+                          </div>
+                          <div class="dashboard__revenue__label">
+                            <div class="dashboard__revenue__label__name dashboard__revenue__label__name_orange"> <span>Вызов на дом</span></div>
+                            <div class="dashboard__revenue__label__summ">19 600.00 ₽</div>
+                          </div>
+                        </div><canvas class="dashboard__chart dashboard__chart_1" id="myChart1"></canvas>
+                      </div>
                     </div>
                   </div>
                   <div class="col-lg-4 mb-4">
@@ -122,7 +153,24 @@
                       <div class="dashboard__section__shell">
                         <div class="dashboard__section__head">
                           <div class="dashboard__section__title">Записи</div>
-                        </div><canvas class="dashboard__chart dashboard__chart_2" id="myChart2"></canvas>
+                        </div>
+                        <div class="dashboard__summ"><canvas class="dashboard__chart dashboard__chart_2" id="myChart2"></canvas>
+                          <div class="dashboard__summ__center">234</div>
+                        </div>
+                        <div class="dashboard__records">
+                          <div class="dashboard__records__label">
+                            <div class="dashboard__records__label__name dashboard__records__label__name_green">Онлайн прием</div>
+                            <div class="dashboard__records__label__right"><span class="dashboard__records__label__abs">48</span><span class="dashboard__records__label__percent dashboard__records__label__percent_minus">-12%</span></div>
+                          </div>
+                          <div class="dashboard__records__label">
+                            <div class="dashboard__records__label__name dashboard__records__label__name_purple">Очный прием</div>
+                            <div class="dashboard__records__label__right"><span class="dashboard__records__label__abs">39</span><span class="dashboard__records__label__percent dashboard__records__label__percent_plus">+6%</span></div>
+                          </div>
+                          <div class="dashboard__records__label">
+                            <div class="dashboard__records__label__name dashboard__records__label__name_orange">Вызов на дом</div>
+                            <div class="dashboard__records__label__right"><span class="dashboard__records__label__abs">16</span><span class="dashboard__records__label__percent dashboard__records__label__percent_plus">+28%</span></div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -318,6 +366,10 @@
                       <div class="dashboard__section__shell">
                         <div class="dashboard__section__head">
                           <div class="dashboard__section__title">Источники записей</div>
+                          <div class="dashboard__devices">
+                            <div class="dashboard__devices__label dashboard__devices__label_desktop">компьютер</div>
+                            <div class="dashboard__devices__label dashboard__devices__label_phone">смартфон</div>
+                          </div>
                         </div><canvas class="dashboard__chart dashboard__chart_3" id="myChart3"></canvas>
                       </div>
                     </div>
@@ -330,7 +382,7 @@
       </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.2.1/dist/chart.min.js"></script>
-    <script src="/assets/js/common.js?v-1620846192546"></script><script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="/assets/js/common.js?v-1620917697791"></script><script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </body>

@@ -1,0 +1,25 @@
+.toggles
+    display: inline-flex
+    &__toggle
+        display: inline-block
+        border: none
+        padding: 8px 24px
+        font-size: 16px
+        margin: 0
+        border: 1px solid #CBD0D2
+        background: transparent
+        &:first-child
+            border-radius: 4px 0 0 4px
+        &:last-child
+            border-radius: 0 4px 4px 0
+        &_active
+            background: var(--teal) !important
+            color: #FFFFFF !important
+            border: 1px solid var(--teal) !important
+        &:hover
+            background: var(--lightteal)
+            border: 1px solid var(--lightteal)
+        &:active
+            background: var(--strongteal)
+            color: #FFFFFF
+            border: 1px solid var(--strongteal)

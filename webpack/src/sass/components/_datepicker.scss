@@ -1,0 +1,13 @@
+$default-color: #555;
+$primary-color: #70C9B9;
+
+$input-border-color: #CCCCCC !default;
+$input-hover-border-color: #CCCCCC !default;
+
+
+@import '~vue2-datepicker/scss/index.scss';
+
+.mx-input {
+  height: 38px !important;
+
+}
