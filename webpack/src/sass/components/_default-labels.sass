@@ -1,0 +1,12 @@
+.default-labels
+    display: flex
+    flex-wrap: wrap
+    label:last-child
+        margin: 0
+    label:first-child,
+    & > *
+        margin: 0 28px 22px 0 !important
+@media (max-width: #{$md}px)
+    .default-labels
+        & > label
+            margin: 0 12px 22px 0

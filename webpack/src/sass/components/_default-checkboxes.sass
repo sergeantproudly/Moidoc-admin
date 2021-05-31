@@ -1,0 +1,33 @@
+.default-checkboxes
+    &__checkbox
+        margin: 0 20px 0 0
+        &:hover
+            cursor: pointer
+        &:last-child
+            margin: 0
+        &__input
+            display: none
+        &__input:checked + &__square::before
+            content: ""
+            width: 10px
+            height: 10px
+            border-radius: 50%
+            background-color: var(--teal)
+            display: block
+        &__square
+            width: 14px
+            height: 14px
+            background: #FFFFFF
+            border: 1px solid #CBD0D2
+            box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.1)
+            margin: 0 6px 0 0
+            vertical-align: middle
+            border-radius: 50%
+            display: inline-flex
+            align-items: center
+            align-content: center
+            justify-content: center
+        &__name
+            font-size: 16px
+            vertical-align: middle
+            

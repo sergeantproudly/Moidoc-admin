@@ -1,13 +1,13 @@
 import "../sass/main.sass";
 
 window.toggleMobileMenu = (node) => {
-    let mobileMenu = document.querySelector(".skeleton__right")
+    let indent = document.querySelector(".skeleton__indent")
     if (node.classList.contains("skeleton__burger_active")) {
         node.classList.remove("skeleton__burger_active")
-        mobileMenu.classList.remove("skeleton__right_indent")
+        indent.classList.remove("skeleton__indent_active")
     } else {
         node.classList.add("skeleton__burger_active")
-        mobileMenu.classList.add("skeleton__right_indent")
+        indent.classList.add("skeleton__indent_active")
     }
 }
 

@@ -9,7 +9,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
     <link rel="manifest" href="/assets/favicon/site.webmanifest">
     <link rel="mask-icon" href="/assets/favicon/safari-pinned-tab.svg&quot; color=&quot;#5bbad5"><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link href="/assets/css/main.css?v-1622479127256" rel="stylesheet">
+    <link href="/assets/css/main.css?v-1622479127262" rel="stylesheet">
   </head>
   <body>
         <div class="container-fluid">
@@ -85,7 +85,7 @@
                     <div class="skeleton__right__head skeleton__head_right">
                       <div class="skeleton__right__side">
                         <button class="skeleton__burger" onclick="toggleMobileMenu(this)"><span class="skeleton__burger__line"></span></button>
-                        <p class="skeleton__headline">Медицина 24/7</p>
+                        <p class="skeleton__headline"> <span>Медицина 24/7</span><span>ООО "ССМЦ" </span><span>Медицина 24/7 на Трубной</span></p>
                       </div>
                       <div class="skeleton__right__side"><a class="skeleton__logout skeleton__logout_mobile" href="#">
                            <svg class="skeleton__logout__icon" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -95,286 +95,71 @@
 </svg></a></div>
                     </div>
                     <div class="skeleton__right__content">
-                      <div class="information-about-polyclinics">
-                        <div class="information-about-polyclinics__shell">
-                          <div class="information-about-polyclinics__logo"><img class="information-about-polyclinics__logo__picture" src="/assets/img/logo-polyclinics.png"></div>
-                          <div class="information-about-polyclinics__middle">
-                            <div class="information-about-polyclinics__name">Медицина 24/7</div>
-                            <div class="information-about-polyclinics__labels">
-                              <div class="information-about-polyclinics__labels__label">Россия, Зеленоград, Панфиловский пр-т, 10З, GMT+3</div>
-                              <div class="information-about-polyclinics__labels__label">+7&nbsp;(966)&nbsp;192‑32‑31</div>
-                              <div class="information-about-polyclinics__labels__label">info@medica24.ru</div>
-                              <div class="information-about-polyclinics__labels__label">medica24.ru</div>
+                      <div class="reports-page default-wrap-page">
+                        <div class="reports-page__top">
+                          <h1 class="headline-page">Отчеты</h1>
+                          <p class="reports-page__description">Здесь можно скачать отчет — расчет выплат докторам за проведение онлайн-консультаций на платформе Мой Доктор. <br>Отчет за предыдущий месяц доступен с 3-го числа следующего месяца.</p>
+                          <div class="default-labels">
+                            <div class="default-label"><span class="default-label__title">Выберите медцентр</span>
+                              <label class="default-select">
+                                <select class="default-select__select">
+                                  <option disabled>Выбрать</option>
+                                  <option>1</option>
+                                  <option>2</option>
+                                </select>
+                              </label>
+                            </div>
+                            <div class="default-label"><span class="default-label__title">Выберите юр.лицо</span>
+                              <label class="default-select">
+                                <select class="default-select__select">
+                                  <option disabled>Выбрать</option>
+                                  <option>1</option>
+                                  <option>2</option>
+                                </select>
+                              </label>
+                            </div>
+                            <div class="default-label"><span class="default-label__title">Выберите филиал</span>
+                              <label class="default-select">
+                                <select class="default-select__select">
+                                  <option disabled>Выбрать</option>
+                                  <option>1</option>
+                                  <option>2</option>
+                                </select>
+                              </label>
                             </div>
                           </div>
-                          <div class="information-about-polyclinics__actions">
-                            <button class="btn">Редактировать</button>
-                          </div>
+                          <label class="default-label"><span class="default-label__title">Выберите период</span>
+                            <div class="default-selects">
+                              <label class="default-select default-select_short"><span class="default-select__label">с</span>
+                                <select class="default-select__select">
+                                  <option>1</option>
+                                  <option>2</option>
+                                </select>
+                              </label>
+                              <label class="default-select default-select_short"><span class="default-select__label">по</span>
+                                <select class="default-select__select">
+                                  <option>2</option>
+                                  <option>1</option>
+                                </select>
+                              </label>
+                            </div>
+                          </label>
+                          <label class="default-label"><span class="default-label__title">Формат отчета</span>
+                            <div class="default-checkboxes">
+                              <label class="default-checkboxes__checkbox">
+                                <input class="default-checkboxes__checkbox__input" type="radio" name="1" checked><span class="default-checkboxes__checkbox__square"></span><span class="default-checkboxes__checkbox__name">XLS </span>
+                              </label>
+                              <label class="default-checkboxes__checkbox">
+                                <input class="default-checkboxes__checkbox__input" type="radio" name="1"><span class="default-checkboxes__checkbox__square"></span><span class="default-checkboxes__checkbox__name">CVC </span>
+                              </label>
+                            </div>
+                          </label>
+                          <label class="default-label"><span class="default-label__title">Электронная почта</span>
+                            <input class="default-input" placeholder="">
+                          </label>
+                          <button class="btn" disabled>Скачать Отчет</button>
                         </div>
-                        <div class="information-about-polyclinics__filter">
-                          <div class="toggles">
-                            <button class="toggles__toggle toggles__toggle_active">Неделя</button>
-                            <button class="toggles__toggle">Месяц</button>
-                          </div>
-                          <div class="information-about-polyclinics__filter__label">
-                            <div class="information-about-polyclinics__filter__label__name">Период с</div>
-                            <div class="information-about-polyclinics__filter__label__input-placeholder"></div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="dashboard">
-                        <div class="row">
-                          <div class="col-lg-8 mb-4">
-                            <div class="dashboard__section">
-                              <div class="dashboard__section__shell">
-                                <div class="dashboard__revenue">
-                                  <div class="dashboard__revenue__label">
-                                    <div class="dashboard__revenue__label__name">доходы итого</div>
-                                    <div class="dashboard__revenue__label__summ">87 600.00 ₽</div>
-                                  </div>
-                                  <div class="dashboard__revenue__label">
-                                    <div class="dashboard__revenue__label__name dashboard__revenue__label__name_green"> <span>Онлайн приемы</span></div>
-                                    <div class="dashboard__revenue__label__summ">22 000.00 ₽</div>
-                                  </div>
-                                  <div class="dashboard__revenue__label">
-                                    <div class="dashboard__revenue__label__name dashboard__revenue__label__name_purple"> <span>Очные приемы</span></div>
-                                    <div class="dashboard__revenue__label__summ">46 000.00 ₽</div>
-                                  </div>
-                                  <div class="dashboard__revenue__label">
-                                    <div class="dashboard__revenue__label__name dashboard__revenue__label__name_orange"> <span>Вызов на дом</span></div>
-                                    <div class="dashboard__revenue__label__summ">19 600.00 ₽</div>
-                                  </div>
-                                </div><canvas class="dashboard__chart dashboard__chart_1" id="myChart1"></canvas>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-lg-4 mb-4">
-                            <div class="dashboard__section">
-                              <div class="dashboard__section__shell">
-                                <div class="dashboard__section__head">
-                                  <div class="dashboard__section__title">Записи</div>
-                                </div>
-                                <div class="dashboard__summ"><canvas class="dashboard__chart dashboard__chart_2" id="myChart2"></canvas>
-                                  <div class="dashboard__summ__center">234</div>
-                                </div>
-                                <div class="dashboard__records">
-                                  <div class="dashboard__records__label">
-                                    <div class="dashboard__records__label__name dashboard__records__label__name_green">Онлайн прием</div>
-                                    <div class="dashboard__records__label__right"><span class="dashboard__records__label__abs">48</span><span class="dashboard__records__label__percent dashboard__records__label__percent_minus">-12%</span></div>
-                                  </div>
-                                  <div class="dashboard__records__label">
-                                    <div class="dashboard__records__label__name dashboard__records__label__name_purple">Очный прием</div>
-                                    <div class="dashboard__records__label__right"><span class="dashboard__records__label__abs">39</span><span class="dashboard__records__label__percent dashboard__records__label__percent_plus">+6%</span></div>
-                                  </div>
-                                  <div class="dashboard__records__label">
-                                    <div class="dashboard__records__label__name dashboard__records__label__name_orange">Вызов на дом</div>
-                                    <div class="dashboard__records__label__right"><span class="dashboard__records__label__abs">16</span><span class="dashboard__records__label__percent dashboard__records__label__percent_plus">+28%</span></div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-lg-12 mb-4">
-                            <div class="dashboard__section">
-                              <div class="dashboard__section__shell">
-                                <div class="dashboard__section__head">
-                                  <div class="dashboard__section__title">Виджет</div>
-                                </div>
-                                <div class="row">
-                                  <div class="col-lg-3">
-                                    <div class="dashboard__widget">
-                                      <div class="dashboard__widget__name">пользователей</div>
-                                      <div class="dashboard__widget__bottom">
-                                        <div class="dashboard__widget__number">239</div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="col-lg-3">
-                                    <div class="dashboard__widget">
-                                      <div class="dashboard__widget__name">записей</div>
-                                      <div class="dashboard__widget__bottom">
-                                        <div class="dashboard__widget__number">45</div>
-                                        <div class="dashboard__widget__different dashboard__widget__different_minus">-12%</div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="col-lg-3">
-                                    <div class="dashboard__widget">
-                                      <div class="dashboard__widget__name">подтвержденных </div>
-                                      <div class="dashboard__widget__bottom">
-                                        <div class="dashboard__widget__number">33</div>
-                                        <div class="dashboard__widget__different dashboard__widget__different_plus">+64%</div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="col-lg-3">
-                                    <div class="dashboard__widget">
-                                      <div class="dashboard__widget__name">отмененных</div>
-                                      <div class="dashboard__widget__bottom">
-                                        <div class="dashboard__widget__number">4</div>
-                                        <div class="dashboard__widget__different dashboard__widget__different_plus">-3%</div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-lg-5 mb-4">
-                            <div class="dashboard__section">
-                              <div class="dashboard__section__shell">
-                                <div class="dashboard__section__head">
-                                  <div class="dashboard__section__title">Оценки</div>
-                                  <div class="dashboard__ratings-summ">
-                                    <div class="dashboard__ratings-summ__stars"><img class="dashboard__ratings-summ__stars__star" src="/assets/img/star.svg"><img class="dashboard__ratings-summ__stars__star" src="/assets/img/star.svg"><img class="dashboard__ratings-summ__stars__star" src="/assets/img/star.svg"><img class="dashboard__ratings-summ__stars__star" src="/assets/img/star.svg"><img class="dashboard__ratings-summ__stars__star" src="/assets/img/star.svg"></div>
-                                    <div class="dashboard__ratings-summ__text">4.7/5</div>
-                                    <div class="dashboard__ratings-summ__separator"></div>
-                                    <div class="dashboard__ratings-summ__text">304 отзыва</div>
-                                  </div>
-                                </div>
-                                <div class="dashboard__ratings">
-                                  <div class="dashboard__ratings__lines">
-                                    <div class="dashboard__ratings__line">
-                                      <div class="dashboard__ratings__line__number">5</div>
-                                      <div class="dashboard__ratings__line__visual"> 
-                                        <div class="dashboard__ratings__line__visual__progress" style="width: 80%"></div>
-                                      </div>
-                                      <div class="dashboard__ratings__line__percent">80%</div>
-                                    </div>
-                                    <div class="dashboard__ratings__line">
-                                      <div class="dashboard__ratings__line__number">4</div>
-                                      <div class="dashboard__ratings__line__visual"> 
-                                        <div class="dashboard__ratings__line__visual__progress" style="width: 80%"></div>
-                                      </div>
-                                      <div class="dashboard__ratings__line__percent">80%</div>
-                                    </div>
-                                    <div class="dashboard__ratings__line">
-                                      <div class="dashboard__ratings__line__number">3</div>
-                                      <div class="dashboard__ratings__line__visual"> 
-                                        <div class="dashboard__ratings__line__visual__progress" style="width: 60%"></div>
-                                      </div>
-                                      <div class="dashboard__ratings__line__percent">60%</div>
-                                    </div>
-                                    <div class="dashboard__ratings__line">
-                                      <div class="dashboard__ratings__line__number">2</div>
-                                      <div class="dashboard__ratings__line__visual"> 
-                                        <div class="dashboard__ratings__line__visual__progress" style="width: 30%"></div>
-                                      </div>
-                                      <div class="dashboard__ratings__line__percent">30%</div>
-                                    </div>
-                                    <div class="dashboard__ratings__line">
-                                      <div class="dashboard__ratings__line__number">1</div>
-                                      <div class="dashboard__ratings__line__visual"> 
-                                        <div class="dashboard__ratings__line__visual__progress" style="width: 10%"></div>
-                                      </div>
-                                      <div class="dashboard__ratings__line__percent">10%</div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-lg-7 mb-4">
-                            <div class="dashboard__section">
-                              <div class="dashboard__section__shell">
-                                <div class="dashboard__section__head">
-                                  <div class="dashboard__section__title">Последние отзывы</div><a class="dashboard__reviews-all" href="#">Смотреть все</a>
-                                </div>
-                                <div class="dashboard__reviews">
-                                  <div class="dashboard__reviews__review">
-                                    <div class="dashboard__reviews__review__name">Маркова Анна Федоровна</div>
-                                    <div class="dashboard__reviews__review__stars"><img class="dashboard__reviews__review__stars__star" src="/assets/img/star.svg"><img class="dashboard__reviews__review__stars__star" src="/assets/img/star.svg"><img class="dashboard__reviews__review__stars__star" src="/assets/img/star.svg"><img class="dashboard__reviews__review__stars__star" src="/assets/img/star.svg"><img class="dashboard__reviews__review__stars__star" src="/assets/img/star.svg"></div>
-                                    <div class="dashboard__reviews__review__time">2 дня назад</div>
-                                    <div class="dashboard__reviews__review__text">Озова Ф.М.-отличный,опытный врач.Постоянно наблюдаюсь только у нее,т.к до этого побывала у многих специалистов и однозначо могу сказать, что Озова это лучший из них во всей Москве!</div>
-                                  </div>
-                                  <div class="dashboard__reviews__review">
-                                    <div class="dashboard__reviews__review__name">Маркова Анна Федоровна</div>
-                                    <div class="dashboard__reviews__review__stars"><img class="dashboard__reviews__review__stars__star" src="/assets/img/star.svg"><img class="dashboard__reviews__review__stars__star" src="/assets/img/star.svg"><img class="dashboard__reviews__review__stars__star" src="/assets/img/star.svg"><img class="dashboard__reviews__review__stars__star" src="/assets/img/star.svg"><img class="dashboard__reviews__review__stars__star" src="/assets/img/star.svg"></div>
-                                    <div class="dashboard__reviews__review__time">2 дня назад</div>
-                                    <div class="dashboard__reviews__review__text">Озова Ф.М.-отличный,опытный врач.Постоянно наблюдаюсь только у нее,т.к</div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-lg-6 mb-4">
-                            <div class="dashboard__section">
-                              <div class="dashboard__section__shell">
-                                <div class="dashboard__section__head">
-                                  <div class="dashboard__section__title">Специальности</div>
-                                </div>
-                                <div class="dashboard__specialties">
-                                  <div class="dashboard__specialties__line">
-                                    <div class="dashboard__specialties__column_1">
-                                      <div class="dashboard__specialties__head">Специальность</div>
-                                    </div>
-                                    <div class="dashboard__specialties__column_2">
-                                      <div class="dashboard__specialties__head">записей</div>
-                                    </div>
-                                    <div class="dashboard__specialties__column_3">
-                                      <div class="dashboard__specialties__head">% от общего числа</div>
-                                    </div>
-                                  </div>
-                                  <div class="dashboard__specialties__line">
-                                    <div class="dashboard__specialties__column_1">
-                                      <div class="dashboard__specialties__name">Гастроэнтеролог</div>
-                                    </div>
-                                    <div class="dashboard__specialties__column_2">
-                                      <div class="dashboard__specialties__number">36</div>
-                                    </div>
-                                    <div class="dashboard__specialties__column_3">
-                                      <div class="dashboard__specialties__number">10%</div>
-                                      <div class="dashboard__specialties__visual"> 
-                                        <div class="dashboard__specialties__visual__progress" style="width: 30%"></div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="dashboard__specialties__line">
-                                    <div class="dashboard__specialties__column_1">
-                                      <div class="dashboard__specialties__name">Офтальмолог</div>
-                                    </div>
-                                    <div class="dashboard__specialties__column_2">
-                                      <div class="dashboard__specialties__number">36</div>
-                                    </div>
-                                    <div class="dashboard__specialties__column_3">
-                                      <div class="dashboard__specialties__number">70%</div>
-                                      <div class="dashboard__specialties__visual"> 
-                                        <div class="dashboard__specialties__visual__progress" style="width: 70%"></div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="dashboard__specialties__line">
-                                    <div class="dashboard__specialties__column_1">
-                                      <div class="dashboard__specialties__name">Терапевт</div>
-                                    </div>
-                                    <div class="dashboard__specialties__column_2">
-                                      <div class="dashboard__specialties__number">36</div>
-                                    </div>
-                                    <div class="dashboard__specialties__column_3">
-                                      <div class="dashboard__specialties__number">70%</div>
-                                      <div class="dashboard__specialties__visual"> 
-                                        <div class="dashboard__specialties__visual__progress" style="width: 70%"></div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-lg-6 mb-4">
-                            <div class="dashboard__section">
-                              <div class="dashboard__section__shell">
-                                <div class="dashboard__section__head">
-                                  <div class="dashboard__section__title">Источники записей</div>
-                                  <div class="dashboard__devices">
-                                    <div class="dashboard__devices__label dashboard__devices__label_desktop">компьютер</div>
-                                    <div class="dashboard__devices__label dashboard__devices__label_phone">смартфон</div>
-                                  </div>
-                                </div><canvas class="dashboard__chart dashboard__chart_3" id="myChart3"></canvas>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
+                        <p class="notice">Готово! Отчет успешно отправлен на почту mshaverov@gmail.com</p>
                       </div>
                     </div>
               </div>
@@ -382,7 +167,7 @@
           </div>
         </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.2.1/dist/chart.min.js"></script>
-    <script src="/assets/js/common.js?v-1622479127256"></script><script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="/assets/js/common.js?v-1622479127262"></script><script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </body>
