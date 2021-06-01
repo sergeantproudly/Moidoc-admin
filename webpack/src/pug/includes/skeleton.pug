@@ -270,7 +270,7 @@ mixin report()
                 p.reports-page__description Здесь можно скачать отчет — расчет выплат докторам за проведение онлайн-консультаций на платформе Мой Доктор. <br>Отчет за предыдущий месяц доступен с 3-го числа следующего месяца.
                 .default-labels
                     div.default-label
-                        span.default-label__title Выберите медцентр
+                        span.default-label__title.default-label__title_fz10 Выберите медцентр
                         label.default-select
                             select(
                             ).default-select__select
@@ -280,7 +280,7 @@ mixin report()
                                 option 1
                                 option 2
                     div.default-label
-                        span.default-label__title Выберите юр.лицо
+                        span.default-label__title.default-label__title_fz10 Выберите юр.лицо
                         label.default-select
                             select(
                             ).default-select__select
@@ -290,7 +290,7 @@ mixin report()
                                 option 1
                                 option 2
                     div.default-label
-                        span.default-label__title Выберите филиал
+                        span.default-label__title.default-label__title_fz10 Выберите филиал
                         label.default-select
                             select(
                             ).default-select__select
@@ -300,7 +300,7 @@ mixin report()
                                 option 1
                                 option 2
                 label.default-label
-                    span.default-label__title Выберите период
+                    span.default-label__title.default-label__title_fz10 Выберите период
                     .default-selects
                         label.default-select.default-select_short
                             span.default-select__label с
@@ -315,7 +315,7 @@ mixin report()
                                 option 2
                                 option 1
                 label.default-label
-                    span.default-label__title Формат отчета
+                    span.default-label__title.default-label__title_fz10 Формат отчета
                     .default-checkboxes
                         label.default-checkboxes__checkbox
                             input(type="radio" name="1" checked).default-checkboxes__checkbox__input
@@ -326,15 +326,720 @@ mixin report()
                             span.default-checkboxes__checkbox__square
                             span.default-checkboxes__checkbox__name CVC 
                 label.default-label
-                    span.default-label__title Электронная почта
+                    span.default-label__title.default-label__title_fz10 Электронная почта
                     input(placeholder="").default-input
                 button(
                     disabled
                 ).btn Скачать Отчет
             p.notice Готово! Отчет успешно отправлен на почту mshaverov@gmail.com
-mixin skeleton(page)
+mixin centers()
+    .skeleton__right__head.skeleton__head_right
+        .skeleton__right__side
+            button(
+                onclick="toggleMobileMenu(this)"
+            ).skeleton__burger
+                span.skeleton__burger__line
+        .skeleton__right__side
+            a(href="#").skeleton__logout.skeleton__logout_mobile 
+                <svg class="skeleton__logout__icon" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2.00276 0C0.893543 0 0 0.894276 0 1.99742V17.0026C0 18.1091 0.896666 19 2.00276 19H10.9972C12.1065 19 13 18.1057 13 17.0026V1.99742C13 0.890925 12.1033 0 10.9972 0H2.00276ZM1 17.0026V1.99742C1 1.44584 1.44655 1 2.00276 1H10.9972C11.5531 1 12 1.44523 12 1.99742V17.0026C12 17.5542 11.5534 18 10.9972 18H2.00276C1.44693 18 1 17.5548 1 17.0026Z" fill="#70C9B9"/>
+                    <rect x="7" y="9" width="12" height="1" fill="#70C9B9"/>
+                    <path d="M16 6L19.5 9.5L16 13" stroke="#70C9B9"/>
+                </svg>
+    .skeleton__right__content
+        .centers-page.default-wrap-page.default-wrap-page_grey
+            .centers-page__head
+                h1.headline-page Медцентры
+                button.btn Добавить медцентр
+            .default-search
+                input(
+                    placeholder="Поиск"
+                ).default-search__input
+                button.default-search__get
+                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.4151 11.1912L16.7472 15.524C17.0842 15.8611 17.0853 16.4065 16.7444 16.7475C16.4058 17.0861 15.852 17.0813 15.5211 16.7503L11.1891 12.4175C8.46815 14.5354 4.53239 14.3437 2.03143 11.8423C-0.677144 9.13319 -0.677144 4.7409 2.03143 2.03181C4.74001 -0.677271 9.13148 -0.677271 11.8401 2.03181C14.341 4.53324 14.5327 8.46974 12.4151 11.1912ZM10.614 10.616C12.6454 8.58415 12.6454 5.28993 10.614 3.25812C8.58254 1.22631 5.28894 1.22631 3.25751 3.25812C1.22608 5.28993 1.22608 8.58415 3.25751 10.616C5.28894 12.6478 8.58254 12.6478 10.614 10.616Z" fill="#70C9B9"/>
+                    </svg>
+            .medical-center
+                a(href="#").medical-center__head
+                    span.medical-center__head__side
+                        span.medical-center__head__logo
+                            img(src=`${url}assets/tmp/Artboard 1.png`).medical-center__head__logo__picture
+                        span.medical-center__head__name Семейная
+                    span.medical-center__head__side
+                        span.medical-center__head__arrow
+                            <svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L6 6.72L1 12" stroke="#70C9B9" stroke-linecap="round"/>
+                            </svg>
+
+                .medical-center__second-level
+                    .medical-center__second-level__side
+                        a(href="#").medical-center__second-level__name ООО "ССМЦ" 
+                    .medical-center__second-level__side
+                        button.btn Добавить филиал
+                        a(href="#").medical-center__second-level__arrow
+                            <svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L6 6.72L1 12" stroke="#70C9B9" stroke-linecap="round"/>
+                            </svg>
+                a(href="#").medical-center__third-level
+                    span.medical-center__third-level__side
+                        span(
+                            style="background: #D75161"
+                        ).medical-center__third-level__point
+                        span.medical-center__third-level__name Семейная на Каширской #{`    `}
+                        span.medical-center__third-level__address Россия, г. Москва, Каширское шоссе, д.56к1
+                    span.medical-center__third-level__side
+                        span.medical-center__third-level__arrow
+                            <svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L6 6.72L1 12" stroke="#70C9B9" stroke-linecap="round"/>
+                            </svg>
+                a(href="#").medical-center__third-level
+                    span.medical-center__third-level__side
+                        span(
+                            style="background: var(--teal)"
+                        ).medical-center__third-level__point
+                        span.medical-center__third-level__name Семейная на Полежаевской   
+                        span.medical-center__third-level__address Россия, г. Москва, Хорошевское шоссе, д.80
+                    span.medical-center__third-level__side
+                        span.medical-center__third-level__arrow
+                            <svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L6 6.72L1 12" stroke="#70C9B9" stroke-linecap="round"/>
+                            </svg>
+                a(href="#").medical-center__third-level
+                    span.medical-center__third-level__side
+                        span(
+                            style="background: var(--teal)"
+                        ).medical-center__third-level__point
+                        span.medical-center__third-level__name Семейная на Киевской   
+                        span.medical-center__third-level__address Россия, г. Москва, Брянская ул., д.3
+                    span.medical-center__third-level__side
+                        span.medical-center__third-level__arrow
+                            <svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L6 6.72L1 12" stroke="#70C9B9" stroke-linecap="round"/>
+                            </svg>
+                a(href="#").medical-center__third-level
+                    span.medical-center__third-level__side
+                        span(
+                            style="background: var(--teal)"
+                        ).medical-center__third-level__point
+                        span.medical-center__third-level__name Семейная на Измайловской   
+                        span.medical-center__third-level__address Россия, г. Москва, Первомайская ул, д.42
+                    span.medical-center__third-level__side
+                        span.medical-center__third-level__arrow
+                            <svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L6 6.72L1 12" stroke="#70C9B9" stroke-linecap="round"/>
+                            </svg>
+
+                .medical-center__second-level
+                    .medical-center__second-level__side
+                        a(href="#").medical-center__second-level__name ООО "ССМЦ №1”
+                    .medical-center__second-level__side
+                        button.btn Добавить филиал
+                        a(href="#").medical-center__second-level__arrow
+                            <svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L6 6.72L1 12" stroke="#70C9B9" stroke-linecap="round"/>
+                            </svg>
+                a(href="#").medical-center__third-level
+                    span.medical-center__third-level__side
+                        span(
+                            style="background: #D75161"
+                        ).medical-center__third-level__point
+                        span.medical-center__third-level__name Семейная на Киевской   
+                        span.medical-center__third-level__address Россия, г. Москва, Брянская ул., д.3
+                    span.medical-center__third-level__side
+                        span.medical-center__third-level__arrow
+                            <svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L6 6.72L1 12" stroke="#70C9B9" stroke-linecap="round"/>
+                            </svg>
+                a(href="#").medical-center__third-level
+                    span.medical-center__third-level__side
+                        span(
+                            style="background: var(--teal)"
+                        ).medical-center__third-level__point
+                        span.medical-center__third-level__name Семейная на Измайловской   
+                        span.medical-center__third-level__address Россия, г. Москва, Первомайская ул, д.42 
+                    span.medical-center__third-level__side
+                        span.medical-center__third-level__arrow
+                            <svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L6 6.72L1 12" stroke="#70C9B9" stroke-linecap="round"/>
+                            </svg>
+                a(href="#").medical-center__third-level
+                    span.medical-center__third-level__side
+                        span(
+                            style="background: var(--teal)"
+                        ).medical-center__third-level__point
+                        span.medical-center__third-level__name Семейная на Каширской   
+                        span.medical-center__third-level__address Россия, г. Москва, Каширское шоссе, д.56к1
+                    span.medical-center__third-level__side
+                        span.medical-center__third-level__arrow
+                            <svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L6 6.72L1 12" stroke="#70C9B9" stroke-linecap="round"/>
+                            </svg>
+                a(href="#").medical-center__third-level
+                    span.medical-center__third-level__side
+                        span(
+                            style="background: var(--teal)"
+                        ).medical-center__third-level__point
+                        span.medical-center__third-level__name Семейная на Полежаевской   
+                        span.medical-center__third-level__address Россия, г. Москва, Хорошевское шоссе, д.80
+                    span.medical-center__third-level__side
+                        span.medical-center__third-level__arrow
+                            <svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L6 6.72L1 12" stroke="#70C9B9" stroke-linecap="round"/>
+                            </svg>
+
+                .medical-center__second-level
+                    .medical-center__second-level__side
+                        a(href="#").medical-center__second-level__name ООО "ССМЦ №2”
+                    .medical-center__second-level__side
+                        button.btn Добавить филиал
+                        a(href="#").medical-center__second-level__arrow
+                            <svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L6 6.72L1 12" stroke="#70C9B9" stroke-linecap="round"/>
+                            </svg>
+                a(href="#").medical-center__third-level
+                    span.medical-center__third-level__side
+                        span(
+                            style="background: #D75161"
+                        ).medical-center__third-level__point
+                        span.medical-center__third-level__name Семейная на Каширской   
+                        span.medical-center__third-level__address Россия, г. Москва, Каширское шоссе, д.56к1
+                    span.medical-center__third-level__side
+                        span.medical-center__third-level__arrow
+                            <svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L6 6.72L1 12" stroke="#70C9B9" stroke-linecap="round"/>
+                            </svg>
+                a(href="#").medical-center__third-level
+                    span.medical-center__third-level__side
+                        span(
+                            style="background: var(--teal)"
+                        ).medical-center__third-level__point
+                        span.medical-center__third-level__name Семейная на Полежаевской   
+                        span.medical-center__third-level__address Россия, г. Москва, Хорошевское шоссе, д.80
+                    span.medical-center__third-level__side
+                        span.medical-center__third-level__arrow
+                            <svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L6 6.72L1 12" stroke="#70C9B9" stroke-linecap="round"/>
+                            </svg>
+                a(href="#").medical-center__third-level
+                    span.medical-center__third-level__side
+                        span(
+                            style="background: var(--teal)"
+                        ).medical-center__third-level__point
+                        span.medical-center__third-level__name Семейная на Киевской   
+                        span.medical-center__third-level__address Россия, г. Москва, Брянская ул., д.3
+                    span.medical-center__third-level__side
+                        span.medical-center__third-level__arrow
+                            <svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L6 6.72L1 12" stroke="#70C9B9" stroke-linecap="round"/>
+                            </svg>
+                a(href="#").medical-center__third-level
+                    span.medical-center__third-level__side
+                        span(
+                            style="background: var(--teal)"
+                        ).medical-center__third-level__point
+                        span.medical-center__third-level__name Семейная на Измайловской   
+                        span.medical-center__third-level__address Россия, г. Москва, Первомайская ул, д.42
+                    span.medical-center__third-level__side
+                        span.medical-center__third-level__arrow
+                            <svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L6 6.72L1 12" stroke="#70C9B9" stroke-linecap="round"/>
+                            </svg>
+
+            .medical-center
+                a(href="#").medical-center__head
+                    span.medical-center__head__side
+                        span.medical-center__head__logo
+                            img(src=`${url}assets/tmp/1552386311 2.png`).medical-center__head__logo__picture
+                        span.medical-center__head__name Медицина 24/7
+                    span.medical-center__head__side
+                        span.medical-center__head__arrow
+                            <svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L6 6.72L1 12" stroke="#70C9B9" stroke-linecap="round"/>
+                            </svg>
+
+                .medical-center__second-level
+                    .medical-center__second-level__side
+                        a(href="#").medical-center__second-level__name ООО "Мед 24" 
+                    .medical-center__second-level__side
+                        button.btn Добавить филиал
+                        a(href="#").medical-center__second-level__arrow
+                            <svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L6 6.72L1 12" stroke="#70C9B9" stroke-linecap="round"/>
+                            </svg>
+                a(href="#").medical-center__third-level
+                    span.medical-center__third-level__side
+                        span(
+                            style="background: #D75161"
+                        ).medical-center__third-level__point
+                        span.medical-center__third-level__name Семейная на Каширской #{`    `}
+                        span.medical-center__third-level__address Россия, г. Москва, Каширское шоссе, д.56к1
+                    span.medical-center__third-level__side
+                        span.medical-center__third-level__arrow
+                            <svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L6 6.72L1 12" stroke="#70C9B9" stroke-linecap="round"/>
+                            </svg>
+                a(href="#").medical-center__third-level
+                    span.medical-center__third-level__side
+                        span(
+                            style="background: var(--teal)"
+                        ).medical-center__third-level__point
+                        span.medical-center__third-level__name Семейная на Полежаевской   
+                        span.medical-center__third-level__address Россия, г. Москва, Хорошевское шоссе, д.80
+                    span.medical-center__third-level__side
+                        span.medical-center__third-level__arrow
+                            <svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L6 6.72L1 12" stroke="#70C9B9" stroke-linecap="round"/>
+                            </svg>
+                a(href="#").medical-center__third-level
+                    span.medical-center__third-level__side
+                        span(
+                            style="background: var(--teal)"
+                        ).medical-center__third-level__point
+                        span.medical-center__third-level__name Семейная на Киевской   
+                        span.medical-center__third-level__address Россия, г. Москва, Брянская ул., д.3
+                    span.medical-center__third-level__side
+                        span.medical-center__third-level__arrow
+                            <svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L6 6.72L1 12" stroke="#70C9B9" stroke-linecap="round"/>
+                            </svg>
+                a(href="#").medical-center__third-level
+                    span.medical-center__third-level__side
+                        span(
+                            style="background: var(--teal)"
+                        ).medical-center__third-level__point
+                        span.medical-center__third-level__name Семейная на Измайловской   
+                        span.medical-center__third-level__address Россия, г. Москва, Первомайская ул, д.42
+                    span.medical-center__third-level__side
+                        span.medical-center__third-level__arrow
+                            <svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L6 6.72L1 12" stroke="#70C9B9" stroke-linecap="round"/>
+                            </svg>
+
+                .medical-center__second-level
+                    .medical-center__second-level__side
+                        a(href="#").medical-center__second-level__name ООО "Мед 24 №1”
+                    .medical-center__second-level__side
+                        button.btn Добавить филиал
+                        a(href="#").medical-center__second-level__arrow
+                            <svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L6 6.72L1 12" stroke="#70C9B9" stroke-linecap="round"/>
+                            </svg>
+                a(href="#").medical-center__third-level
+                    span.medical-center__third-level__side
+                        span(
+                            style="background: #D75161"
+                        ).medical-center__third-level__point
+                        span.medical-center__third-level__name Семейная на Киевской   
+                        span.medical-center__third-level__address Россия, г. Москва, Брянская ул., д.3
+                    span.medical-center__third-level__side
+                        span.medical-center__third-level__arrow
+                            <svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L6 6.72L1 12" stroke="#70C9B9" stroke-linecap="round"/>
+                            </svg>
+                a(href="#").medical-center__third-level
+                    span.medical-center__third-level__side
+                        span(
+                            style="background: var(--teal)"
+                        ).medical-center__third-level__point
+                        span.medical-center__third-level__name Семейная на Измайловской   
+                        span.medical-center__third-level__address Россия, г. Москва, Первомайская ул, д.42 
+                    span.medical-center__third-level__side
+                        span.medical-center__third-level__arrow
+                            <svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L6 6.72L1 12" stroke="#70C9B9" stroke-linecap="round"/>
+                            </svg>
+                a(href="#").medical-center__third-level
+                    span.medical-center__third-level__side
+                        span(
+                            style="background: var(--teal)"
+                        ).medical-center__third-level__point
+                        span.medical-center__third-level__name Семейная на Каширской   
+                        span.medical-center__third-level__address Россия, г. Москва, Каширское шоссе, д.56к1
+                    span.medical-center__third-level__side
+                        span.medical-center__third-level__arrow
+                            <svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L6 6.72L1 12" stroke="#70C9B9" stroke-linecap="round"/>
+                            </svg>
+                a(href="#").medical-center__third-level
+                    span.medical-center__third-level__side
+                        span(
+                            style="background: var(--teal)"
+                        ).medical-center__third-level__point
+                        span.medical-center__third-level__name Семейная на Полежаевской   
+                        span.medical-center__third-level__address Россия, г. Москва, Хорошевское шоссе, д.80
+                    span.medical-center__third-level__side
+                        span.medical-center__third-level__arrow
+                            <svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L6 6.72L1 12" stroke="#70C9B9" stroke-linecap="round"/>
+                            </svg>
+
+                .medical-center__second-level
+                    .medical-center__second-level__side
+                        a(href="#").medical-center__second-level__name ООО "Мед №2”
+                    .medical-center__second-level__side
+                        button.btn Добавить филиал
+                        a(href="#").medical-center__second-level__arrow
+                            <svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L6 6.72L1 12" stroke="#70C9B9" stroke-linecap="round"/>
+                            </svg>
+                a(href="#").medical-center__third-level
+                    span.medical-center__third-level__side
+                        span(
+                            style="background: #D75161"
+                        ).medical-center__third-level__point
+                        span.medical-center__third-level__name Семейная на Каширской   
+                        span.medical-center__third-level__address Россия, г. Москва, Каширское шоссе, д.56к1
+                    span.medical-center__third-level__side
+                        span.medical-center__third-level__arrow
+                            <svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L6 6.72L1 12" stroke="#70C9B9" stroke-linecap="round"/>
+                            </svg>
+                a(href="#").medical-center__third-level
+                    span.medical-center__third-level__side
+                        span(
+                            style="background: var(--teal)"
+                        ).medical-center__third-level__point
+                        span.medical-center__third-level__name Семейная на Полежаевской   
+                        span.medical-center__third-level__address Россия, г. Москва, Хорошевское шоссе, д.80
+                    span.medical-center__third-level__side
+                        span.medical-center__third-level__arrow
+                            <svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L6 6.72L1 12" stroke="#70C9B9" stroke-linecap="round"/>
+                            </svg>
+                a(href="#").medical-center__third-level
+                    span.medical-center__third-level__side
+                        span(
+                            style="background: var(--teal)"
+                        ).medical-center__third-level__point
+                        span.medical-center__third-level__name Семейная на Киевской   
+                        span.medical-center__third-level__address Россия, г. Москва, Брянская ул., д.3
+                    span.medical-center__third-level__side
+                        span.medical-center__third-level__arrow
+                            <svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L6 6.72L1 12" stroke="#70C9B9" stroke-linecap="round"/>
+                            </svg>
+                a(href="#").medical-center__third-level
+                    span.medical-center__third-level__side
+                        span(
+                            style="background: var(--teal)"
+                        ).medical-center__third-level__point
+                        span.medical-center__third-level__name Семейная на Измайловской   
+                        span.medical-center__third-level__address Россия, г. Москва, Первомайская ул, д.42
+                    span.medical-center__third-level__side
+                        span.medical-center__third-level__arrow
+                            <svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L6 6.72L1 12" stroke="#70C9B9" stroke-linecap="round"/>
+                            </svg>
+mixin records()
+    .skeleton__right__head.skeleton__head_right
+        .skeleton__right__side
+            button(
+                onclick="toggleMobileMenu(this)"
+            ).skeleton__burger
+                span.skeleton__burger__line
+        .skeleton__right__side
+            a(href="#").skeleton__logout.skeleton__logout_mobile 
+                <svg class="skeleton__logout__icon" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2.00276 0C0.893543 0 0 0.894276 0 1.99742V17.0026C0 18.1091 0.896666 19 2.00276 19H10.9972C12.1065 19 13 18.1057 13 17.0026V1.99742C13 0.890925 12.1033 0 10.9972 0H2.00276ZM1 17.0026V1.99742C1 1.44584 1.44655 1 2.00276 1H10.9972C11.5531 1 12 1.44523 12 1.99742V17.0026C12 17.5542 11.5534 18 10.9972 18H2.00276C1.44693 18 1 17.5548 1 17.0026Z" fill="#70C9B9"/>
+                    <rect x="7" y="9" width="12" height="1" fill="#70C9B9"/>
+                    <path d="M16 6L19.5 9.5L16 13" stroke="#70C9B9"/>
+                </svg>
+    .skeleton__right__content
+        .records-page.default-wrap-page
+            h1.headline-page Записи
+            .default-search
+                input(
+                    placeholder="Поиск"
+                ).default-search__input
+                button.default-search__get
+                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.4151 11.1912L16.7472 15.524C17.0842 15.8611 17.0853 16.4065 16.7444 16.7475C16.4058 17.0861 15.852 17.0813 15.5211 16.7503L11.1891 12.4175C8.46815 14.5354 4.53239 14.3437 2.03143 11.8423C-0.677144 9.13319 -0.677144 4.7409 2.03143 2.03181C4.74001 -0.677271 9.13148 -0.677271 11.8401 2.03181C14.341 4.53324 14.5327 8.46974 12.4151 11.1912ZM10.614 10.616C12.6454 8.58415 12.6454 5.28993 10.614 3.25812C8.58254 1.22631 5.28894 1.22631 3.25751 3.25812C1.22608 5.28993 1.22608 8.58415 3.25751 10.616C5.28894 12.6478 8.58254 12.6478 10.614 10.616Z" fill="#70C9B9"/>
+                    </svg>
+            .default-labels
+                div.default-label
+                    span.default-label__title.default-label__title_fz10 Тип приема
+                    label.default-select.default-select_short
+                        select(
+                        ).default-select__select
+                            option() Выбрать
+                            option 1
+                            option 2
+                div.default-label
+                    span.default-label__title.default-label__title_fz10 филиал
+                    label.default-select.default-select_short
+                        select(
+                        ).default-select__select
+                            option() Выбрать
+                            option 1
+                            option 2
+                div.default-label
+                    span.default-label__title.default-label__title_fz10 оценка приема
+                    label.default-select.default-select_middle
+                        select(
+                        ).default-select__select
+                            option() Выбрать
+                            option 1
+                            option 2
+                div.default-label
+                    span.default-label__title.default-label__title_fz10
+                    .toggles
+                        button.toggles__toggle.toggles__toggle_active Неделя
+                        button.toggles__toggle Месяц
+                label.default-label
+                    span.default-label__title.default-label__title_fz10
+                    .default-selects
+                        label.default-select.default-select_short
+                            span.default-select__label Период с
+                            select(
+                            ).default-select__select
+                                option 1
+                                option 2
+                        label.default-select.default-select_short
+                            span.default-select__label по
+                            select(
+                            ).default-select__select
+                                option 2
+                                option 1
+            .records
+                .records__scroll
+                    .records__head
+                        .records__col-type Тип
+                        .records__col-name Пациент
+                        .records__col-phone Телефон
+                        .records__col-doctor Доктор
+                        .records__col-role Специальность
+                        .records__col-date
+                            .records__sort Дата и время
+                                img(src=`${url}assets/img/sort-desc.svg`).records__sort-desc
+                        .records__col-source 
+                            .records__sort Источник
+                                img(src=`${url}assets/img/sort-asc.svg`).records__sort-asc
+                        .records__col-rate Оценка 
+                    .records__body
+                        .records__line
+                            .records__col-type
+                                .records__type
+                                    <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M14.8831 10.0429C13.7142 10.0429 12.7669 10.9989 12.7669 12.1782C12.7669 13.1554 13.4174 13.9772 14.3045 14.2316V14.3137C14.3045 16.2538 12.7403 17.8323 10.8177 17.8323C8.90444 17.8323 7.34619 16.269 7.33115 14.3413C7.33173 14.3322 7.33173 14.3227 7.33173 14.3135V12.816C10.2334 12.5221 12.5065 10.0439 12.5065 7.03964V4.06886C12.5065 2.81633 11.577 1.78118 10.378 1.62198C10.18 1.25164 9.79233 1 9.34627 1C8.69925 1 8.1745 1.52935 8.1745 2.18208C8.1745 2.83501 8.69925 3.36436 9.34627 3.36436C9.76842 3.36436 10.1377 3.13783 10.3441 2.7994C10.9186 2.93154 11.3494 3.44999 11.3494 4.06886V7.03983C11.3494 9.59744 9.28764 11.6779 6.75317 11.6779C4.2189 11.6779 2.15711 9.59744 2.15711 7.03983V4.06886C2.15711 3.4498 2.58756 2.93134 3.16245 2.7994C3.36842 3.13783 3.73754 3.36436 4.16027 3.36436C4.8071 3.36436 5.33166 2.83501 5.33166 2.18208C5.33166 1.52935 4.8071 1 4.16027 1C3.71401 1 3.32638 1.25164 3.12832 1.62198C1.92916 1.78118 1 2.81633 1 4.06886V7.03983C1 10.0443 3.27296 12.5223 6.17462 12.8162V14.2837C6.17423 14.2937 6.17384 14.3036 6.17384 14.3137C6.17384 16.8976 8.25723 19 10.8177 19C13.3782 19 15.4616 16.8976 15.4616 14.3137V14.2316C16.3487 13.9772 17 13.1556 17 12.1782C16.9998 10.9989 16.0517 10.0429 14.8831 10.0429ZM14.8827 13.3099C14.2634 13.3099 13.7614 12.8029 13.7614 12.1784C13.7614 11.5523 14.2636 11.0469 14.8827 11.0469C15.5031 11.0469 16.0051 11.5525 16.0051 12.1784C16.0051 12.8027 15.5031 13.3099 14.8827 13.3099Z" fill="#70C9B9" stroke="#70C9B9" stroke-width="0.5"/>
+                                    </svg>
+                            .records__col-name 
+                                .records__name Маркова Анна
+                            .records__col-phone
+                                a(href="#").records__phone +7 925 766-87-09
+                            .records__col-doctor
+                                .records__doctor
+                                    img(src=`${url}assets/tmp/image 3.png`).records__doctor__avatar
+                                    .records__doctor__name Маркова А. В.
+                            .records__col-role
+                                .records__role Терапевт
+                            .records__col-date
+                                .records__date  12.03.20
+                            .records__col-source
+                                .records__source Виджет десктоп
+                            .records__col-rate 
+                                .records__rate 
+                                    img(src=`${url}assets/img/gold-star.svg`).records__rate__star
+                                    img(src=`${url}assets/img/gold-star.svg`).records__rate__star
+                                    img(src=`${url}assets/img/gold-star.svg`).records__rate__star
+                                    img(src=`${url}assets/img/gold-star.svg`).records__rate__star
+                                    img(src=`${url}assets/img/grey-star.svg`).records__rate__star
+                        .records__line
+                            .records__col-type
+                                .records__type
+                                    <svg width="23" height="16" viewBox="0 0 23 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3.9742 1.00036C2.33038 1.00036 1 2.30765 1 3.92374V12.0766C1 13.6924 2.33038 15 3.9742 15H12.2699C13.9137 15 15.2441 13.6924 15.2441 12.0766V10.1385L18.6073 12.9811C18.9864 13.2616 19.4294 13.4029 19.8778 13.4029C20.1989 13.4029 20.5237 13.3301 20.8276 13.1813C21.5556 12.8244 22 12.1168 22 11.3166C22 11.3635 22 10.3304 22 4.72497C22 3.92481 21.5548 3.21791 20.8262 2.86069C20.0975 2.50347 19.2553 2.57986 18.6058 3.06118L18.5898 3.07301L15.2441 5.90529V3.92338C15.2441 2.30765 13.9137 1 12.2699 1L3.9742 1.00036ZM3.9742 1.80338H12.2699C13.4551 1.80338 14.4271 2.75883 14.4271 3.92374V12.0777C14.4271 13.2426 13.4551 14.1981 12.2699 14.1981H3.9742C2.78904 14.1981 1.81698 13.2426 1.81698 12.0777V3.92374C1.81698 2.75883 2.78904 1.80338 3.9742 1.80338ZM19.7797 3.44529C20.0114 3.42736 20.2478 3.47434 20.4613 3.57835H20.4627C20.9024 3.7939 21.183 4.24294 21.183 4.72425C21.183 10.3309 21.183 11.3585 21.183 11.3174C21.183 11.7997 20.9017 12.2477 20.4627 12.4633H20.4613C20.0333 12.6727 19.514 12.6336 19.1251 12.3592L19.109 12.3488L15.2441 9.07757V6.96511L19.1265 3.68308C19.3203 3.54715 19.5458 3.46358 19.7797 3.44529Z" fill="#70C9B9" stroke="#70C9B9" stroke-width="0.8"/>
+                                    </svg>
+                            .records__col-name 
+                                .records__name Черняев Анатолий
+                            .records__col-phone
+                                a(href="#").records__phone +7 909 324-87-43
+                            .records__col-doctor
+                                .records__doctor
+                                    img(src=`${url}assets/tmp/image 3.png`).records__doctor__avatar
+                                    .records__doctor__name Физулина С. Н.
+                            .records__col-role
+                                .records__role.records__role_empty Не знает
+                            .records__col-date
+                                .records__date  10.03.20, 17:00
+                            .records__col-source
+                                .records__source Виджет мобильный
+                            .records__col-rate 
+                                .records__rate 
+                                    img(src=`${url}assets/img/gold-star.svg`).records__rate__star
+                                    img(src=`${url}assets/img/gold-star.svg`).records__rate__star
+                                    img(src=`${url}assets/img/gold-star.svg`).records__rate__star
+                                    img(src=`${url}assets/img/gold-star.svg`).records__rate__star
+                                    img(src=`${url}assets/img/grey-star.svg`).records__rate__star
+                        .records__line
+                            .records__col-type
+                                .records__type
+                                    <svg width="21" height="17" viewBox="0 0 21 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.84842 1H16.5543C17.1846 1 17.6888 1.37815 17.9409 1.92437L20.2518 7.68067C20.4198 8.14286 20.5459 8.60504 20.5459 9.06723C20.5459 9.19328 20.5459 12.5126 20.5459 12.6387C20.5459 13.2269 20.0417 13.7311 19.4535 13.7311H18.6972C18.4871 15.0336 17.3946 16 16.0501 16C14.7056 16 13.5711 14.9916 13.403 13.7311H7.68876C7.47867 15.0336 6.38623 16 5.0417 16C3.69716 16 2.5627 14.9916 2.39464 13.7311H1.5543C0.966066 13.7311 0.461864 13.2269 0.461864 12.6387V2.47059C0.377831 1.67227 1.0501 1 1.84842 1ZM1.21817 2.47059V8.64706H12.3946V1.84034H1.84842C1.51229 1.84034 1.21817 2.13445 1.21817 2.47059ZM17.1425 2.2605C17.0585 2.0084 16.8064 1.84034 16.5543 1.84034H13.235V8.64706H19.6635C19.6215 8.39496 19.5795 8.18487 19.4535 7.97479L17.1425 2.2605ZM16.0081 15.2017C17.0165 15.2017 17.8568 14.3613 17.8568 13.3529C17.8568 12.3445 17.0165 11.5042 16.0081 11.5042C14.9997 11.5042 14.1593 12.3445 14.1593 13.3529C14.1593 14.3613 14.9997 15.2017 16.0081 15.2017ZM4.99968 15.2017C6.00808 15.2017 6.84842 14.3613 6.84842 13.3529C6.84842 12.3445 6.00808 11.5042 4.99968 11.5042C3.99128 11.5042 3.15094 12.3445 3.15094 13.3529C3.15094 14.3613 3.94926 15.2017 4.99968 15.2017ZM1.47027 12.8908H2.3106C2.52069 11.6303 3.61312 10.6218 4.99968 10.6218C6.38623 10.6218 7.47867 11.6303 7.64674 12.8908H13.361C13.5291 11.6303 14.6635 10.6218 16.0081 10.6218C17.3526 10.6218 18.4871 11.6303 18.6551 12.8908H19.4535C19.5795 12.8908 19.7056 12.7647 19.7056 12.6387V9.48739H1.21817V12.6387C1.21817 12.8067 1.34422 12.8908 1.47027 12.8908Z" fill="#70C9B9" stroke="#70C9B9" stroke-width="0.7"/>
+                                        <path d="M8.40307 5.70599H7.26862V6.84045C7.26862 7.09255 7.10055 7.26062 6.84845 7.26062C6.59635 7.26062 6.42828 7.09255 6.42828 6.84045V5.70599H5.29383C5.04173 5.70599 4.87366 5.53793 4.87366 5.28582C4.87366 5.03372 5.04173 4.86566 5.29383 4.86566H6.42828V3.7312C6.42828 3.4791 6.59635 3.31104 6.84845 3.31104C7.10055 3.31104 7.26862 3.4791 7.26862 3.7312V4.86566H8.40307C8.65517 4.86566 8.82324 5.03372 8.82324 5.28582C8.82324 5.53793 8.65517 5.70599 8.40307 5.70599Z" fill="#70C9B9" stroke="#70C9B9" stroke-width="0.7"/>
+                                    </svg>
+                            .records__col-name 
+                                .records__name Виджет мобильный
+                            .records__col-phone
+                                a(href="#").records__phone +7 925 766-87-09
+                            .records__col-doctor
+                                .records__doctor
+                                    img(src=`${url}assets/tmp/image 3.png`).records__doctor__avatar
+                                    .records__doctor__name Маркова А. В.
+                            .records__col-role
+                                .records__role Гастроэнтеролог
+                            .records__col-date
+                                .records__date  12.03.20
+                            .records__col-source
+                                .records__source Виджет десктоп
+                            .records__col-rate 
+                                .records__rate 
+                                    img(src=`${url}assets/img/gold-star.svg`).records__rate__star
+                                    img(src=`${url}assets/img/gold-star.svg`).records__rate__star
+                                    img(src=`${url}assets/img/gold-star.svg`).records__rate__star
+                                    img(src=`${url}assets/img/gold-star.svg`).records__rate__star
+                                    img(src=`${url}assets/img/grey-star.svg`).records__rate__star
+                        .records__line
+                            .records__col-type
+                                .records__type
+                                    <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M14.8831 10.0429C13.7142 10.0429 12.7669 10.9989 12.7669 12.1782C12.7669 13.1554 13.4174 13.9772 14.3045 14.2316V14.3137C14.3045 16.2538 12.7403 17.8323 10.8177 17.8323C8.90444 17.8323 7.34619 16.269 7.33115 14.3413C7.33173 14.3322 7.33173 14.3227 7.33173 14.3135V12.816C10.2334 12.5221 12.5065 10.0439 12.5065 7.03964V4.06886C12.5065 2.81633 11.577 1.78118 10.378 1.62198C10.18 1.25164 9.79233 1 9.34627 1C8.69925 1 8.1745 1.52935 8.1745 2.18208C8.1745 2.83501 8.69925 3.36436 9.34627 3.36436C9.76842 3.36436 10.1377 3.13783 10.3441 2.7994C10.9186 2.93154 11.3494 3.44999 11.3494 4.06886V7.03983C11.3494 9.59744 9.28764 11.6779 6.75317 11.6779C4.2189 11.6779 2.15711 9.59744 2.15711 7.03983V4.06886C2.15711 3.4498 2.58756 2.93134 3.16245 2.7994C3.36842 3.13783 3.73754 3.36436 4.16027 3.36436C4.8071 3.36436 5.33166 2.83501 5.33166 2.18208C5.33166 1.52935 4.8071 1 4.16027 1C3.71401 1 3.32638 1.25164 3.12832 1.62198C1.92916 1.78118 1 2.81633 1 4.06886V7.03983C1 10.0443 3.27296 12.5223 6.17462 12.8162V14.2837C6.17423 14.2937 6.17384 14.3036 6.17384 14.3137C6.17384 16.8976 8.25723 19 10.8177 19C13.3782 19 15.4616 16.8976 15.4616 14.3137V14.2316C16.3487 13.9772 17 13.1556 17 12.1782C16.9998 10.9989 16.0517 10.0429 14.8831 10.0429ZM14.8827 13.3099C14.2634 13.3099 13.7614 12.8029 13.7614 12.1784C13.7614 11.5523 14.2636 11.0469 14.8827 11.0469C15.5031 11.0469 16.0051 11.5525 16.0051 12.1784C16.0051 12.8027 15.5031 13.3099 14.8827 13.3099Z" fill="#70C9B9" stroke="#70C9B9" stroke-width="0.5"/>
+                                    </svg>
+                            .records__col-name 
+                                .records__name Маркова Анна
+                            .records__col-phone
+                                a(href="#").records__phone +7 925 766-87-09
+                            .records__col-doctor
+                                .records__doctor
+                                    img(src=`${url}assets/tmp/image 3.png`).records__doctor__avatar
+                                    .records__doctor__name Маркова А. В.
+                            .records__col-role
+                                .records__role Терапевт
+                            .records__col-date
+                                .records__date  12.03.20
+                            .records__col-source
+                                .records__source Виджет десктоп
+                            .records__col-rate 
+                                .records__rate 
+                                    img(src=`${url}assets/img/gold-star.svg`).records__rate__star
+                                    img(src=`${url}assets/img/gold-star.svg`).records__rate__star
+                                    img(src=`${url}assets/img/gold-star.svg`).records__rate__star
+                                    img(src=`${url}assets/img/gold-star.svg`).records__rate__star
+                                    img(src=`${url}assets/img/grey-star.svg`).records__rate__star
+                        .records__line
+                            .records__col-type
+                                .records__type
+                                    <svg width="23" height="16" viewBox="0 0 23 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3.9742 1.00036C2.33038 1.00036 1 2.30765 1 3.92374V12.0766C1 13.6924 2.33038 15 3.9742 15H12.2699C13.9137 15 15.2441 13.6924 15.2441 12.0766V10.1385L18.6073 12.9811C18.9864 13.2616 19.4294 13.4029 19.8778 13.4029C20.1989 13.4029 20.5237 13.3301 20.8276 13.1813C21.5556 12.8244 22 12.1168 22 11.3166C22 11.3635 22 10.3304 22 4.72497C22 3.92481 21.5548 3.21791 20.8262 2.86069C20.0975 2.50347 19.2553 2.57986 18.6058 3.06118L18.5898 3.07301L15.2441 5.90529V3.92338C15.2441 2.30765 13.9137 1 12.2699 1L3.9742 1.00036ZM3.9742 1.80338H12.2699C13.4551 1.80338 14.4271 2.75883 14.4271 3.92374V12.0777C14.4271 13.2426 13.4551 14.1981 12.2699 14.1981H3.9742C2.78904 14.1981 1.81698 13.2426 1.81698 12.0777V3.92374C1.81698 2.75883 2.78904 1.80338 3.9742 1.80338ZM19.7797 3.44529C20.0114 3.42736 20.2478 3.47434 20.4613 3.57835H20.4627C20.9024 3.7939 21.183 4.24294 21.183 4.72425C21.183 10.3309 21.183 11.3585 21.183 11.3174C21.183 11.7997 20.9017 12.2477 20.4627 12.4633H20.4613C20.0333 12.6727 19.514 12.6336 19.1251 12.3592L19.109 12.3488L15.2441 9.07757V6.96511L19.1265 3.68308C19.3203 3.54715 19.5458 3.46358 19.7797 3.44529Z" fill="#70C9B9" stroke="#70C9B9" stroke-width="0.8"/>
+                                    </svg>
+                            .records__col-name 
+                                .records__name Маркова Анна
+                            .records__col-phone
+                                a(href="#").records__phone +7 925 766-87-09
+                            .records__col-doctor
+                                .records__doctor
+                                    img(src=`${url}assets/tmp/image 3.png`).records__doctor__avatar
+                                    .records__doctor__name Маркова А. В.
+                            .records__col-role
+                                .records__role.records__role_empty Не знает
+                            .records__col-date
+                                .records__date  12.03.20
+                            .records__col-source
+                                .records__source Виджет десктоп
+                            .records__col-rate 
+                                .records__rate 
+                                    img(src=`${url}assets/img/gold-star.svg`).records__rate__star
+                                    img(src=`${url}assets/img/gold-star.svg`).records__rate__star
+                                    img(src=`${url}assets/img/gold-star.svg`).records__rate__star
+                                    img(src=`${url}assets/img/gold-star.svg`).records__rate__star
+                                    img(src=`${url}assets/img/grey-star.svg`).records__rate__star
+                        .records__line
+                            .records__col-type
+                                .records__type
+                                    <svg width="21" height="17" viewBox="0 0 21 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.84842 1H16.5543C17.1846 1 17.6888 1.37815 17.9409 1.92437L20.2518 7.68067C20.4198 8.14286 20.5459 8.60504 20.5459 9.06723C20.5459 9.19328 20.5459 12.5126 20.5459 12.6387C20.5459 13.2269 20.0417 13.7311 19.4535 13.7311H18.6972C18.4871 15.0336 17.3946 16 16.0501 16C14.7056 16 13.5711 14.9916 13.403 13.7311H7.68876C7.47867 15.0336 6.38623 16 5.0417 16C3.69716 16 2.5627 14.9916 2.39464 13.7311H1.5543C0.966066 13.7311 0.461864 13.2269 0.461864 12.6387V2.47059C0.377831 1.67227 1.0501 1 1.84842 1ZM1.21817 2.47059V8.64706H12.3946V1.84034H1.84842C1.51229 1.84034 1.21817 2.13445 1.21817 2.47059ZM17.1425 2.2605C17.0585 2.0084 16.8064 1.84034 16.5543 1.84034H13.235V8.64706H19.6635C19.6215 8.39496 19.5795 8.18487 19.4535 7.97479L17.1425 2.2605ZM16.0081 15.2017C17.0165 15.2017 17.8568 14.3613 17.8568 13.3529C17.8568 12.3445 17.0165 11.5042 16.0081 11.5042C14.9997 11.5042 14.1593 12.3445 14.1593 13.3529C14.1593 14.3613 14.9997 15.2017 16.0081 15.2017ZM4.99968 15.2017C6.00808 15.2017 6.84842 14.3613 6.84842 13.3529C6.84842 12.3445 6.00808 11.5042 4.99968 11.5042C3.99128 11.5042 3.15094 12.3445 3.15094 13.3529C3.15094 14.3613 3.94926 15.2017 4.99968 15.2017ZM1.47027 12.8908H2.3106C2.52069 11.6303 3.61312 10.6218 4.99968 10.6218C6.38623 10.6218 7.47867 11.6303 7.64674 12.8908H13.361C13.5291 11.6303 14.6635 10.6218 16.0081 10.6218C17.3526 10.6218 18.4871 11.6303 18.6551 12.8908H19.4535C19.5795 12.8908 19.7056 12.7647 19.7056 12.6387V9.48739H1.21817V12.6387C1.21817 12.8067 1.34422 12.8908 1.47027 12.8908Z" fill="#70C9B9" stroke="#70C9B9" stroke-width="0.7"/>
+                                        <path d="M8.40307 5.70599H7.26862V6.84045C7.26862 7.09255 7.10055 7.26062 6.84845 7.26062C6.59635 7.26062 6.42828 7.09255 6.42828 6.84045V5.70599H5.29383C5.04173 5.70599 4.87366 5.53793 4.87366 5.28582C4.87366 5.03372 5.04173 4.86566 5.29383 4.86566H6.42828V3.7312C6.42828 3.4791 6.59635 3.31104 6.84845 3.31104C7.10055 3.31104 7.26862 3.4791 7.26862 3.7312V4.86566H8.40307C8.65517 4.86566 8.82324 5.03372 8.82324 5.28582C8.82324 5.53793 8.65517 5.70599 8.40307 5.70599Z" fill="#70C9B9" stroke="#70C9B9" stroke-width="0.7"/>
+                                    </svg>
+                            .records__col-name 
+                                .records__name Маркова Анна
+                            .records__col-phone
+                                a(href="#").records__phone +7 925 766-87-09
+                            .records__col-doctor
+                                .records__doctor
+                                    img(src=`${url}assets/tmp/image 3.png`).records__doctor__avatar
+                                    .records__doctor__name Маркова А. В.
+                            .records__col-role
+                                .records__role.records__role_empty Не знает
+                            .records__col-date
+                                .records__date  12.03.20
+                            .records__col-source
+                                .records__source Виджет десктоп
+                            .records__col-rate 
+                                .records__rate 
+                                    img(src=`${url}assets/img/gold-star.svg`).records__rate__star
+                                    img(src=`${url}assets/img/gold-star.svg`).records__rate__star
+                                    img(src=`${url}assets/img/gold-star.svg`).records__rate__star
+                                    img(src=`${url}assets/img/gold-star.svg`).records__rate__star
+                                    img(src=`${url}assets/img/grey-star.svg`).records__rate__star
+                        .records__line
+                            .records__col-type
+                                .records__type
+                                    <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M14.8831 10.0429C13.7142 10.0429 12.7669 10.9989 12.7669 12.1782C12.7669 13.1554 13.4174 13.9772 14.3045 14.2316V14.3137C14.3045 16.2538 12.7403 17.8323 10.8177 17.8323C8.90444 17.8323 7.34619 16.269 7.33115 14.3413C7.33173 14.3322 7.33173 14.3227 7.33173 14.3135V12.816C10.2334 12.5221 12.5065 10.0439 12.5065 7.03964V4.06886C12.5065 2.81633 11.577 1.78118 10.378 1.62198C10.18 1.25164 9.79233 1 9.34627 1C8.69925 1 8.1745 1.52935 8.1745 2.18208C8.1745 2.83501 8.69925 3.36436 9.34627 3.36436C9.76842 3.36436 10.1377 3.13783 10.3441 2.7994C10.9186 2.93154 11.3494 3.44999 11.3494 4.06886V7.03983C11.3494 9.59744 9.28764 11.6779 6.75317 11.6779C4.2189 11.6779 2.15711 9.59744 2.15711 7.03983V4.06886C2.15711 3.4498 2.58756 2.93134 3.16245 2.7994C3.36842 3.13783 3.73754 3.36436 4.16027 3.36436C4.8071 3.36436 5.33166 2.83501 5.33166 2.18208C5.33166 1.52935 4.8071 1 4.16027 1C3.71401 1 3.32638 1.25164 3.12832 1.62198C1.92916 1.78118 1 2.81633 1 4.06886V7.03983C1 10.0443 3.27296 12.5223 6.17462 12.8162V14.2837C6.17423 14.2937 6.17384 14.3036 6.17384 14.3137C6.17384 16.8976 8.25723 19 10.8177 19C13.3782 19 15.4616 16.8976 15.4616 14.3137V14.2316C16.3487 13.9772 17 13.1556 17 12.1782C16.9998 10.9989 16.0517 10.0429 14.8831 10.0429ZM14.8827 13.3099C14.2634 13.3099 13.7614 12.8029 13.7614 12.1784C13.7614 11.5523 14.2636 11.0469 14.8827 11.0469C15.5031 11.0469 16.0051 11.5525 16.0051 12.1784C16.0051 12.8027 15.5031 13.3099 14.8827 13.3099Z" fill="#70C9B9" stroke="#70C9B9" stroke-width="0.5"/>
+                                    </svg>
+                            .records__col-name 
+                                .records__name Маркова Анна
+                            .records__col-phone
+                                a(href="#").records__phone +7 925 766-87-09
+                            .records__col-doctor
+                                .records__doctor
+                                    img(src=`${url}assets/tmp/image 3.png`).records__doctor__avatar
+                                    .records__doctor__name Маркова А. В.
+                            .records__col-role
+                                .records__role Терапевт
+                            .records__col-date
+                                .records__date  12.03.20
+                            .records__col-source
+                                .records__source Виджет десктоп
+                            .records__col-rate 
+                                .records__rate 
+                                    img(src=`${url}assets/img/gold-star.svg`).records__rate__star
+                                    img(src=`${url}assets/img/gold-star.svg`).records__rate__star
+                                    img(src=`${url}assets/img/gold-star.svg`).records__rate__star
+                                    img(src=`${url}assets/img/gold-star.svg`).records__rate__star
+                                    img(src=`${url}assets/img/grey-star.svg`).records__rate__star
+                        .records__line
+                            .records__col-type
+                                .records__type
+                                    <svg width="23" height="16" viewBox="0 0 23 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3.9742 1.00036C2.33038 1.00036 1 2.30765 1 3.92374V12.0766C1 13.6924 2.33038 15 3.9742 15H12.2699C13.9137 15 15.2441 13.6924 15.2441 12.0766V10.1385L18.6073 12.9811C18.9864 13.2616 19.4294 13.4029 19.8778 13.4029C20.1989 13.4029 20.5237 13.3301 20.8276 13.1813C21.5556 12.8244 22 12.1168 22 11.3166C22 11.3635 22 10.3304 22 4.72497C22 3.92481 21.5548 3.21791 20.8262 2.86069C20.0975 2.50347 19.2553 2.57986 18.6058 3.06118L18.5898 3.07301L15.2441 5.90529V3.92338C15.2441 2.30765 13.9137 1 12.2699 1L3.9742 1.00036ZM3.9742 1.80338H12.2699C13.4551 1.80338 14.4271 2.75883 14.4271 3.92374V12.0777C14.4271 13.2426 13.4551 14.1981 12.2699 14.1981H3.9742C2.78904 14.1981 1.81698 13.2426 1.81698 12.0777V3.92374C1.81698 2.75883 2.78904 1.80338 3.9742 1.80338ZM19.7797 3.44529C20.0114 3.42736 20.2478 3.47434 20.4613 3.57835H20.4627C20.9024 3.7939 21.183 4.24294 21.183 4.72425C21.183 10.3309 21.183 11.3585 21.183 11.3174C21.183 11.7997 20.9017 12.2477 20.4627 12.4633H20.4613C20.0333 12.6727 19.514 12.6336 19.1251 12.3592L19.109 12.3488L15.2441 9.07757V6.96511L19.1265 3.68308C19.3203 3.54715 19.5458 3.46358 19.7797 3.44529Z" fill="#70C9B9" stroke="#70C9B9" stroke-width="0.8"/>
+                                    </svg>
+                            .records__col-name 
+                                .records__name Маркова Анна
+                            .records__col-phone
+                                a(href="#").records__phone +7 925 766-87-09
+                            .records__col-doctor
+                                .records__doctor
+                                    img(src=`${url}assets/tmp/image 3.png`).records__doctor__avatar
+                                    .records__doctor__name Маркова А. В.
+                            .records__col-role
+                                .records__role.records__role_empty Не знает
+                            .records__col-date
+                                .records__date  12.03.20
+                            .records__col-source
+                                .records__source Виджет десктоп
+                            .records__col-rate 
+                                .records__rate 
+                                    img(src=`${url}assets/img/gold-star.svg`).records__rate__star
+                                    img(src=`${url}assets/img/gold-star.svg`).records__rate__star
+                                    img(src=`${url}assets/img/gold-star.svg`).records__rate__star
+                                    img(src=`${url}assets/img/gold-star.svg`).records__rate__star
+                                    img(src=`${url}assets/img/grey-star.svg`).records__rate__star
+mixin skeleton(params)
+    - let {page, fon} = {...params}
     .container-fluid
-        .row.skeleton
+        div(
+            class=`row skeleton ${fon ? `skeleton_${fon}` : ""}`
+        )
             .col-lg-2.col-md-2.col-sm-3.p-0
                 .skeleton__left
                     .skeleton__left__top
@@ -444,4 +1149,10 @@ mixin skeleton(page)
                     - }
                     - if (page == "report") {
                         +report()
+                    - }
+                    - if (page == "centers") {
+                        +centers()
+                    - }
+                    - if (page == "records") {
+                        +records()
                     - }

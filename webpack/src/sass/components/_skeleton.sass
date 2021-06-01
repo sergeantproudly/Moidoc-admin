@@ -6,6 +6,8 @@ $widthSidebarXS: 260
     align-items: stretch
     align-content: stretch
     justify-content: flex-start
+    &_grey
+        background: #FAFDFC
     &__headline
         font-weight: 500
         font-size: 18px
@@ -148,6 +150,11 @@ $widthSidebarXS: 260
             display: flex
             align-items: center
             align-content: center
+    &__right
+        &__head
+            background: #fff
+        &__content
+            min-height: calc(100vh - 70px)
     &__left
         &__head
             justify-content: flex-start

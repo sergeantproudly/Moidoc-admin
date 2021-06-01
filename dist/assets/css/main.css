@@ -65,6 +65,10 @@ body {
   justify-content: flex-start;
 }
 
+.skeleton_grey {
+  background: #FAFDFC;
+}
+
 .skeleton__headline {
   font-weight: 500;
   font-size: 18px;
@@ -259,6 +263,14 @@ body {
   display: flex;
   align-items: center;
   align-content: center;
+}
+
+.skeleton__right__head {
+  background: #fff;
+}
+
+.skeleton__right__content {
+  min-height: calc(100vh - 70px);
 }
 
 .skeleton__left__head {
@@ -987,7 +999,7 @@ body {
 .toggles__toggle {
   display: inline-block;
   border: none;
-  padding: 8px 24px;
+  padding: 7px 24px;
   font-size: 16px;
   margin: 0;
   border: 1px solid #CBD0D2;
@@ -1038,14 +1050,6 @@ body {
   display: block;
 }
 
-.reports-page__description {
-  margin: 0 0 31px 0;
-}
-
-.reports-page__top {
-  margin: 0 0 45px 0;
-}
-
 .headline-page {
   font-size: 36px;
   line-height: 39px;
@@ -1054,6 +1058,7 @@ body {
 
 .default-wrap-page {
   padding: 45px 52px;
+  min-height: 100%;
 }
 
 @media (max-width: 991px) {
@@ -1085,21 +1090,16 @@ body {
   background-size: 8px auto;
 }
 
+.default-select__select:hover {
+  cursor: pointer;
+}
+
 .default-select_short .default-select__select {
   width: 126px;
 }
 
-.default-label {
-  display: block;
-  margin: 0 0 22px 0;
-}
-
-.default-label__title {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
-  display: block;
-  margin: 0 0 7px 0;
+.default-select_middle .default-select__select {
+  width: 150px;
 }
 
 .default-label {
@@ -1113,6 +1113,43 @@ body {
   line-height: 24px;
   display: block;
   margin: 0 0 7px 0;
+  text-transform: uppercase;
+  min-height: 24px;
+}
+
+.default-label__title_fz10 {
+  font-size: 10px;
+}
+
+@media (max-width: 991px) {
+  .default-label__title:empty {
+    display: none;
+  }
+}
+
+.default-label {
+  display: block;
+  margin: 0 0 22px 0;
+}
+
+.default-label__title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  display: block;
+  margin: 0 0 7px 0;
+  text-transform: uppercase;
+  min-height: 24px;
+}
+
+.default-label__title_fz10 {
+  font-size: 10px;
+}
+
+@media (max-width: 991px) {
+  .default-label__title:empty {
+    display: none;
+  }
 }
 
 .default-checkboxes__checkbox {
@@ -1215,7 +1252,353 @@ body {
 }
 
 @media (max-width: 991px) {
-  .default-labels > label {
-    margin: 0 12px 22px 0;
+  .default-labels label:first-child,
+  .default-labels > * {
+    margin: 0 12px 22px 0 !important;
   }
+}
+
+.default-search {
+  height: 38px;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.default-search__input {
+  height: 100%;
+  width: 100%;
+  border: none;
+  padding: 0 56px 0 16px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 8px -5px #97AFA7;
+  border-radius: 4px;
+}
+
+.default-search__input::placeholder {
+  color: #999999;
+}
+
+.default-search__get {
+  width: 48px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.medical-center {
+  background: #FFFFFF;
+  box-shadow: 0px 4px 8px -5px #97AFA7;
+  border-radius: 9px;
+  margin: 0 0 20px 0;
+  display: block;
+}
+
+.medical-center__head {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  padding: 15px 16px 15px 25px;
+  width: 100%;
+  color: inherit;
+}
+
+.medical-center__head:hover {
+  text-decoration: none;
+  color: inherit;
+  background: #fcfcfc;
+}
+
+.medical-center__head__arrow {
+  padding: 10px 0px 10px 10px;
+}
+
+.medical-center__head__logo {
+  width: 100px;
+  height: 50px;
+  display: inline-flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  margin: 0 26px 0 0;
+}
+
+.medical-center__head__logo__picture {
+  max-width: 100%;
+  max-height: 100%;
+  display: inline-block;
+}
+
+.medical-center__head__name {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 39px;
+}
+
+.medical-center__second-level {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 16px 6px 16px 16px;
+  border-top: 1px solid #E5E5E5;
+}
+
+.medical-center__second-level__name {
+  font-size: 18px;
+  color: inherit;
+}
+
+.medical-center__second-level__name:hover {
+  text-decoration: none;
+  color: inherit;
+  opacity: 0.75;
+}
+
+.medical-center__second-level__arrow {
+  margin: 0 0 0 16px;
+  vertical-align: middle;
+  display: inline-block;
+  padding: 10px 10px 10px 10px;
+}
+
+.medical-center__second-level__arrow:hover {
+  opacity: 0.75;
+}
+
+.medical-center__third-level {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  padding: 10px 16px;
+  border-top: 1px solid #E5E5E5;
+  color: inherit;
+}
+
+.medical-center__third-level:hover {
+  text-decoration: none;
+  color: inherit;
+  background: #fcfcfc;
+}
+
+.medical-center__third-level__point {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin: 0 11px 0 0;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.medical-center__third-level__name {
+  margin: 0 11px 0 0;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.medical-center__third-level__address {
+  color: #979797;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+@media (max-width: 991px) {
+  .medical-center__head__logo {
+    display: flex;
+    margin: 0 0 8px 0;
+  }
+  .medical-center__second-level__side:first-child {
+    margin: 0 0 8px 0;
+  }
+  .medical-center__second-level__side:last-child {
+    display: flex;
+    align-content: center;
+    align-content: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .medical-center__third-level__point {
+    transform: translateY(-2px);
+  }
+}
+
+.records {
+  overflow-x: auto;
+}
+
+.records__head {
+  padding: 15px 0;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 12px;
+  text-transform: uppercase;
+  color: #98A2A7;
+  border-top: 1px solid #ECEEEF;
+  border-bottom: 1px solid #ECEEEF;
+}
+
+.records__head, .records__line {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: flex-start;
+}
+
+.records__line {
+  border-bottom: 1px solid #ECEEEF;
+  padding: 11px 0;
+}
+
+.records__sort {
+  cursor: pointer;
+}
+
+.records__col-type {
+  min-width: 40px;
+  width: 7%;
+}
+
+.records__col-name {
+  min-width: 189px;
+  width: 17%;
+}
+
+.records__col-phone {
+  min-width: 155px;
+  width: 14%;
+}
+
+.records__col-doctor {
+  min-width: 191px;
+  width: 17%;
+}
+
+.records__col-role {
+  min-width: 171px;
+  width: 16%;
+}
+
+.records__col-source {
+  min-width: 160px;
+  width: 14%;
+}
+
+.records__col-date {
+  min-width: 170px;
+  width: 16%;
+}
+
+.records__col-rate {
+  min-width: 80px;
+  width: 7%;
+}
+
+.records__sort-desc, .records__sort-asc {
+  vertical-align: middle;
+  display: inline-block;
+  margin: 0 0 0 6px;
+  transform: translateY(-2px);
+}
+
+.records__type {
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.records__type svg {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.records__phone, .records__phone:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.records__doctor {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.records__doctor__avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.records__doctor__name {
+  padding: 0 0 0 11px;
+}
+
+.records__role_empty {
+  color: #98A2A7;
+}
+
+.records__rate__star {
+  margin: 0 2px 0 0;
+}
+
+.records__rate__star:last-child {
+  margin: 0;
+}
+
+.reports-page__description {
+  margin: 0 0 31px 0;
+}
+
+.reports-page__top {
+  margin: 0 0 45px 0;
+}
+
+.centers-page__head {
+  margin: 0 0 30px 0;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.centers-page__head .headline-page {
+  margin: 0;
+}
+
+.centers-page .default-search {
+  margin: 0 0 20px 0;
+}
+
+@media (max-width: 991px) {
+  .centers-page__head {
+    display: block;
+  }
+  .centers-page__head .headline-page {
+    margin: 0 0 15px 0;
+  }
+}
+
+.records-page .default-search {
+  margin: 0 0 20px 0;
+}
+
+.records-page .default-labels {
+  margin: 0 0 17px 0;
 }

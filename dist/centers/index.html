@@ -9,11 +9,11 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
     <link rel="manifest" href="/assets/favicon/site.webmanifest">
     <link rel="mask-icon" href="/assets/favicon/safari-pinned-tab.svg&quot; color=&quot;#5bbad5"><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link href="/assets/css/main.css?v-1622575823209" rel="stylesheet">
+    <link href="/assets/css/main.css?v-1622575823216" rel="stylesheet">
   </head>
   <body>
         <div class="container-fluid">
-          <div class="row skeleton ">
+          <div class="row skeleton skeleton_grey">
             <div class="col-lg-2 col-md-2 col-sm-3 p-0">
               <div class="skeleton__left">
                 <div class="skeleton__left__top">
@@ -85,7 +85,6 @@
                     <div class="skeleton__right__head skeleton__head_right">
                       <div class="skeleton__right__side">
                         <button class="skeleton__burger" onclick="toggleMobileMenu(this)"><span class="skeleton__burger__line"></span></button>
-                        <p class="skeleton__headline">Медицина 24/7</p>
                       </div>
                       <div class="skeleton__right__side"><a class="skeleton__logout skeleton__logout_mobile" href="#">
                            <svg class="skeleton__logout__icon" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -95,285 +94,121 @@
 </svg></a></div>
                     </div>
                     <div class="skeleton__right__content">
-                      <div class="information-about-polyclinics">
-                        <div class="information-about-polyclinics__shell">
-                          <div class="information-about-polyclinics__logo"><img class="information-about-polyclinics__logo__picture" src="/assets/img/logo-polyclinics.png"></div>
-                          <div class="information-about-polyclinics__middle">
-                            <div class="information-about-polyclinics__name">Медицина 24/7</div>
-                            <div class="information-about-polyclinics__labels">
-                              <div class="information-about-polyclinics__labels__label">Россия, Зеленоград, Панфиловский пр-т, 10З, GMT+3</div>
-                              <div class="information-about-polyclinics__labels__label">+7&nbsp;(966)&nbsp;192‑32‑31</div>
-                              <div class="information-about-polyclinics__labels__label">info@medica24.ru</div>
-                              <div class="information-about-polyclinics__labels__label">medica24.ru</div>
-                            </div>
-                          </div>
-                          <div class="information-about-polyclinics__actions">
-                            <button class="btn">Редактировать</button>
-                          </div>
+                      <div class="centers-page default-wrap-page default-wrap-page_grey">
+                        <div class="centers-page__head">
+                          <h1 class="headline-page">Медцентры</h1>
+                          <button class="btn">Добавить медцентр</button>
                         </div>
-                        <div class="information-about-polyclinics__filter">
-                          <div class="toggles">
-                            <button class="toggles__toggle toggles__toggle_active">Неделя</button>
-                            <button class="toggles__toggle">Месяц</button>
-                          </div>
-                          <div class="information-about-polyclinics__filter__label">
-                            <div class="information-about-polyclinics__filter__label__name">Период с</div>
-                            <div class="information-about-polyclinics__filter__label__input-placeholder"></div>
-                          </div>
+                        <div class="default-search">
+                          <input class="default-search__input" placeholder="Поиск">
+                          <button class="default-search__get"><svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12.4151 11.1912L16.7472 15.524C17.0842 15.8611 17.0853 16.4065 16.7444 16.7475C16.4058 17.0861 15.852 17.0813 15.5211 16.7503L11.1891 12.4175C8.46815 14.5354 4.53239 14.3437 2.03143 11.8423C-0.677144 9.13319 -0.677144 4.7409 2.03143 2.03181C4.74001 -0.677271 9.13148 -0.677271 11.8401 2.03181C14.341 4.53324 14.5327 8.46974 12.4151 11.1912ZM10.614 10.616C12.6454 8.58415 12.6454 5.28993 10.614 3.25812C8.58254 1.22631 5.28894 1.22631 3.25751 3.25812C1.22608 5.28993 1.22608 8.58415 3.25751 10.616C5.28894 12.6478 8.58254 12.6478 10.614 10.616Z" fill="#70C9B9"/>
+</svg>
+                          </button>
                         </div>
-                      </div>
-                      <div class="dashboard">
-                        <div class="row">
-                          <div class="col-lg-8 mb-4">
-                            <div class="dashboard__section">
-                              <div class="dashboard__section__shell">
-                                <div class="dashboard__revenue">
-                                  <div class="dashboard__revenue__label">
-                                    <div class="dashboard__revenue__label__name">доходы итого</div>
-                                    <div class="dashboard__revenue__label__summ">87 600.00 ₽</div>
-                                  </div>
-                                  <div class="dashboard__revenue__label">
-                                    <div class="dashboard__revenue__label__name dashboard__revenue__label__name_green"> <span>Онлайн приемы</span></div>
-                                    <div class="dashboard__revenue__label__summ">22 000.00 ₽</div>
-                                  </div>
-                                  <div class="dashboard__revenue__label">
-                                    <div class="dashboard__revenue__label__name dashboard__revenue__label__name_purple"> <span>Очные приемы</span></div>
-                                    <div class="dashboard__revenue__label__summ">46 000.00 ₽</div>
-                                  </div>
-                                  <div class="dashboard__revenue__label">
-                                    <div class="dashboard__revenue__label__name dashboard__revenue__label__name_orange"> <span>Вызов на дом</span></div>
-                                    <div class="dashboard__revenue__label__summ">19 600.00 ₽</div>
-                                  </div>
-                                </div><canvas class="dashboard__chart dashboard__chart_1" id="myChart1"></canvas>
-                              </div>
+                        <div class="medical-center"><a class="medical-center__head" href="#"><span class="medical-center__head__side"><span class="medical-center__head__logo"><img class="medical-center__head__logo__picture" src="/assets/tmp/Artboard 1.png"></span><span class="medical-center__head__name">Семейная</span></span><span class="medical-center__head__side"><span class="medical-center__head__arrow"><svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L6 6.72L1 12" stroke="#70C9B9" stroke-linecap="round"/>
+</svg></span></span></a>
+                          <div class="medical-center__second-level">
+                            <div class="medical-center__second-level__side"><a class="medical-center__second-level__name" href="#">ООО "ССМЦ" </a></div>
+                            <div class="medical-center__second-level__side">
+                              <button class="btn">Добавить филиал</button><a class="medical-center__second-level__arrow" href="#"><svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L6 6.72L1 12" stroke="#70C9B9" stroke-linecap="round"/>
+</svg></a>
                             </div>
-                          </div>
-                          <div class="col-lg-4 mb-4">
-                            <div class="dashboard__section">
-                              <div class="dashboard__section__shell">
-                                <div class="dashboard__section__head">
-                                  <div class="dashboard__section__title">Записи</div>
-                                </div>
-                                <div class="dashboard__summ"><canvas class="dashboard__chart dashboard__chart_2" id="myChart2"></canvas>
-                                  <div class="dashboard__summ__center">234</div>
-                                </div>
-                                <div class="dashboard__records">
-                                  <div class="dashboard__records__label">
-                                    <div class="dashboard__records__label__name dashboard__records__label__name_green">Онлайн прием</div>
-                                    <div class="dashboard__records__label__right"><span class="dashboard__records__label__abs">48</span><span class="dashboard__records__label__percent dashboard__records__label__percent_minus">-12%</span></div>
-                                  </div>
-                                  <div class="dashboard__records__label">
-                                    <div class="dashboard__records__label__name dashboard__records__label__name_purple">Очный прием</div>
-                                    <div class="dashboard__records__label__right"><span class="dashboard__records__label__abs">39</span><span class="dashboard__records__label__percent dashboard__records__label__percent_plus">+6%</span></div>
-                                  </div>
-                                  <div class="dashboard__records__label">
-                                    <div class="dashboard__records__label__name dashboard__records__label__name_orange">Вызов на дом</div>
-                                    <div class="dashboard__records__label__right"><span class="dashboard__records__label__abs">16</span><span class="dashboard__records__label__percent dashboard__records__label__percent_plus">+28%</span></div>
-                                  </div>
-                                </div>
-                              </div>
+                          </div><a class="medical-center__third-level" href="#"><span class="medical-center__third-level__side"><span class="medical-center__third-level__point" style="background: #D75161"></span><span class="medical-center__third-level__name">Семейная на Каширской     </span><span class="medical-center__third-level__address">Россия, г. Москва, Каширское шоссе, д.56к1</span></span><span class="medical-center__third-level__side"><span class="medical-center__third-level__arrow"><svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L6 6.72L1 12" stroke="#70C9B9" stroke-linecap="round"/>
+</svg></span></span></a><a class="medical-center__third-level" href="#"><span class="medical-center__third-level__side"><span class="medical-center__third-level__point" style="background: var(--teal)"></span><span class="medical-center__third-level__name">Семейная на Полежаевской   </span><span class="medical-center__third-level__address">Россия, г. Москва, Хорошевское шоссе, д.80</span></span><span class="medical-center__third-level__side"><span class="medical-center__third-level__arrow"><svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L6 6.72L1 12" stroke="#70C9B9" stroke-linecap="round"/>
+</svg></span></span></a><a class="medical-center__third-level" href="#"><span class="medical-center__third-level__side"><span class="medical-center__third-level__point" style="background: var(--teal)"></span><span class="medical-center__third-level__name">Семейная на Киевской   </span><span class="medical-center__third-level__address">Россия, г. Москва, Брянская ул., д.3</span></span><span class="medical-center__third-level__side"><span class="medical-center__third-level__arrow"><svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L6 6.72L1 12" stroke="#70C9B9" stroke-linecap="round"/>
+</svg></span></span></a><a class="medical-center__third-level" href="#"><span class="medical-center__third-level__side"><span class="medical-center__third-level__point" style="background: var(--teal)"></span><span class="medical-center__third-level__name">Семейная на Измайловской   </span><span class="medical-center__third-level__address">Россия, г. Москва, Первомайская ул, д.42</span></span><span class="medical-center__third-level__side"><span class="medical-center__third-level__arrow"><svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L6 6.72L1 12" stroke="#70C9B9" stroke-linecap="round"/>
+</svg></span></span></a>
+                          <div class="medical-center__second-level">
+                            <div class="medical-center__second-level__side"><a class="medical-center__second-level__name" href="#">ООО "ССМЦ №1”</a></div>
+                            <div class="medical-center__second-level__side">
+                              <button class="btn">Добавить филиал</button><a class="medical-center__second-level__arrow" href="#"><svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L6 6.72L1 12" stroke="#70C9B9" stroke-linecap="round"/>
+</svg></a>
                             </div>
-                          </div>
-                          <div class="col-lg-12 mb-4">
-                            <div class="dashboard__section">
-                              <div class="dashboard__section__shell">
-                                <div class="dashboard__section__head">
-                                  <div class="dashboard__section__title">Виджет</div>
-                                </div>
-                                <div class="row">
-                                  <div class="col-lg-3">
-                                    <div class="dashboard__widget">
-                                      <div class="dashboard__widget__name">пользователей</div>
-                                      <div class="dashboard__widget__bottom">
-                                        <div class="dashboard__widget__number">239</div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="col-lg-3">
-                                    <div class="dashboard__widget">
-                                      <div class="dashboard__widget__name">записей</div>
-                                      <div class="dashboard__widget__bottom">
-                                        <div class="dashboard__widget__number">45</div>
-                                        <div class="dashboard__widget__different dashboard__widget__different_minus">-12%</div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="col-lg-3">
-                                    <div class="dashboard__widget">
-                                      <div class="dashboard__widget__name">подтвержденных </div>
-                                      <div class="dashboard__widget__bottom">
-                                        <div class="dashboard__widget__number">33</div>
-                                        <div class="dashboard__widget__different dashboard__widget__different_plus">+64%</div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="col-lg-3">
-                                    <div class="dashboard__widget">
-                                      <div class="dashboard__widget__name">отмененных</div>
-                                      <div class="dashboard__widget__bottom">
-                                        <div class="dashboard__widget__number">4</div>
-                                        <div class="dashboard__widget__different dashboard__widget__different_plus">-3%</div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
+                          </div><a class="medical-center__third-level" href="#"><span class="medical-center__third-level__side"><span class="medical-center__third-level__point" style="background: #D75161"></span><span class="medical-center__third-level__name">Семейная на Киевской   </span><span class="medical-center__third-level__address">Россия, г. Москва, Брянская ул., д.3</span></span><span class="medical-center__third-level__side"><span class="medical-center__third-level__arrow"><svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L6 6.72L1 12" stroke="#70C9B9" stroke-linecap="round"/>
+</svg></span></span></a><a class="medical-center__third-level" href="#"><span class="medical-center__third-level__side"><span class="medical-center__third-level__point" style="background: var(--teal)"></span><span class="medical-center__third-level__name">Семейная на Измайловской   </span><span class="medical-center__third-level__address">Россия, г. Москва, Первомайская ул, д.42 </span></span><span class="medical-center__third-level__side"><span class="medical-center__third-level__arrow"><svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L6 6.72L1 12" stroke="#70C9B9" stroke-linecap="round"/>
+</svg></span></span></a><a class="medical-center__third-level" href="#"><span class="medical-center__third-level__side"><span class="medical-center__third-level__point" style="background: var(--teal)"></span><span class="medical-center__third-level__name">Семейная на Каширской   </span><span class="medical-center__third-level__address">Россия, г. Москва, Каширское шоссе, д.56к1</span></span><span class="medical-center__third-level__side"><span class="medical-center__third-level__arrow"><svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L6 6.72L1 12" stroke="#70C9B9" stroke-linecap="round"/>
+</svg></span></span></a><a class="medical-center__third-level" href="#"><span class="medical-center__third-level__side"><span class="medical-center__third-level__point" style="background: var(--teal)"></span><span class="medical-center__third-level__name">Семейная на Полежаевской   </span><span class="medical-center__third-level__address">Россия, г. Москва, Хорошевское шоссе, д.80</span></span><span class="medical-center__third-level__side"><span class="medical-center__third-level__arrow"><svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L6 6.72L1 12" stroke="#70C9B9" stroke-linecap="round"/>
+</svg></span></span></a>
+                          <div class="medical-center__second-level">
+                            <div class="medical-center__second-level__side"><a class="medical-center__second-level__name" href="#">ООО "ССМЦ №2”</a></div>
+                            <div class="medical-center__second-level__side">
+                              <button class="btn">Добавить филиал</button><a class="medical-center__second-level__arrow" href="#"><svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L6 6.72L1 12" stroke="#70C9B9" stroke-linecap="round"/>
+</svg></a>
                             </div>
-                          </div>
-                          <div class="col-lg-5 mb-4">
-                            <div class="dashboard__section">
-                              <div class="dashboard__section__shell">
-                                <div class="dashboard__section__head">
-                                  <div class="dashboard__section__title">Оценки</div>
-                                  <div class="dashboard__ratings-summ">
-                                    <div class="dashboard__ratings-summ__stars"><img class="dashboard__ratings-summ__stars__star" src="/assets/img/star.svg"><img class="dashboard__ratings-summ__stars__star" src="/assets/img/star.svg"><img class="dashboard__ratings-summ__stars__star" src="/assets/img/star.svg"><img class="dashboard__ratings-summ__stars__star" src="/assets/img/star.svg"><img class="dashboard__ratings-summ__stars__star" src="/assets/img/star.svg"></div>
-                                    <div class="dashboard__ratings-summ__text">4.7/5</div>
-                                    <div class="dashboard__ratings-summ__separator"></div>
-                                    <div class="dashboard__ratings-summ__text">304 отзыва</div>
-                                  </div>
-                                </div>
-                                <div class="dashboard__ratings">
-                                  <div class="dashboard__ratings__lines">
-                                    <div class="dashboard__ratings__line">
-                                      <div class="dashboard__ratings__line__number">5</div>
-                                      <div class="dashboard__ratings__line__visual"> 
-                                        <div class="dashboard__ratings__line__visual__progress" style="width: 80%"></div>
-                                      </div>
-                                      <div class="dashboard__ratings__line__percent">80%</div>
-                                    </div>
-                                    <div class="dashboard__ratings__line">
-                                      <div class="dashboard__ratings__line__number">4</div>
-                                      <div class="dashboard__ratings__line__visual"> 
-                                        <div class="dashboard__ratings__line__visual__progress" style="width: 80%"></div>
-                                      </div>
-                                      <div class="dashboard__ratings__line__percent">80%</div>
-                                    </div>
-                                    <div class="dashboard__ratings__line">
-                                      <div class="dashboard__ratings__line__number">3</div>
-                                      <div class="dashboard__ratings__line__visual"> 
-                                        <div class="dashboard__ratings__line__visual__progress" style="width: 60%"></div>
-                                      </div>
-                                      <div class="dashboard__ratings__line__percent">60%</div>
-                                    </div>
-                                    <div class="dashboard__ratings__line">
-                                      <div class="dashboard__ratings__line__number">2</div>
-                                      <div class="dashboard__ratings__line__visual"> 
-                                        <div class="dashboard__ratings__line__visual__progress" style="width: 30%"></div>
-                                      </div>
-                                      <div class="dashboard__ratings__line__percent">30%</div>
-                                    </div>
-                                    <div class="dashboard__ratings__line">
-                                      <div class="dashboard__ratings__line__number">1</div>
-                                      <div class="dashboard__ratings__line__visual"> 
-                                        <div class="dashboard__ratings__line__visual__progress" style="width: 10%"></div>
-                                      </div>
-                                      <div class="dashboard__ratings__line__percent">10%</div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
+                          </div><a class="medical-center__third-level" href="#"><span class="medical-center__third-level__side"><span class="medical-center__third-level__point" style="background: #D75161"></span><span class="medical-center__third-level__name">Семейная на Каширской   </span><span class="medical-center__third-level__address">Россия, г. Москва, Каширское шоссе, д.56к1</span></span><span class="medical-center__third-level__side"><span class="medical-center__third-level__arrow"><svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L6 6.72L1 12" stroke="#70C9B9" stroke-linecap="round"/>
+</svg></span></span></a><a class="medical-center__third-level" href="#"><span class="medical-center__third-level__side"><span class="medical-center__third-level__point" style="background: var(--teal)"></span><span class="medical-center__third-level__name">Семейная на Полежаевской   </span><span class="medical-center__third-level__address">Россия, г. Москва, Хорошевское шоссе, д.80</span></span><span class="medical-center__third-level__side"><span class="medical-center__third-level__arrow"><svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L6 6.72L1 12" stroke="#70C9B9" stroke-linecap="round"/>
+</svg></span></span></a><a class="medical-center__third-level" href="#"><span class="medical-center__third-level__side"><span class="medical-center__third-level__point" style="background: var(--teal)"></span><span class="medical-center__third-level__name">Семейная на Киевской   </span><span class="medical-center__third-level__address">Россия, г. Москва, Брянская ул., д.3</span></span><span class="medical-center__third-level__side"><span class="medical-center__third-level__arrow"><svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L6 6.72L1 12" stroke="#70C9B9" stroke-linecap="round"/>
+</svg></span></span></a><a class="medical-center__third-level" href="#"><span class="medical-center__third-level__side"><span class="medical-center__third-level__point" style="background: var(--teal)"></span><span class="medical-center__third-level__name">Семейная на Измайловской   </span><span class="medical-center__third-level__address">Россия, г. Москва, Первомайская ул, д.42</span></span><span class="medical-center__third-level__side"><span class="medical-center__third-level__arrow"><svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L6 6.72L1 12" stroke="#70C9B9" stroke-linecap="round"/>
+</svg></span></span></a>
+                        </div>
+                        <div class="medical-center"><a class="medical-center__head" href="#"><span class="medical-center__head__side"><span class="medical-center__head__logo"><img class="medical-center__head__logo__picture" src="/assets/tmp/1552386311 2.png"></span><span class="medical-center__head__name">Медицина 24/7</span></span><span class="medical-center__head__side"><span class="medical-center__head__arrow"><svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L6 6.72L1 12" stroke="#70C9B9" stroke-linecap="round"/>
+</svg></span></span></a>
+                          <div class="medical-center__second-level">
+                            <div class="medical-center__second-level__side"><a class="medical-center__second-level__name" href="#">ООО "Мед 24" </a></div>
+                            <div class="medical-center__second-level__side">
+                              <button class="btn">Добавить филиал</button><a class="medical-center__second-level__arrow" href="#"><svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L6 6.72L1 12" stroke="#70C9B9" stroke-linecap="round"/>
+</svg></a>
                             </div>
-                          </div>
-                          <div class="col-lg-7 mb-4">
-                            <div class="dashboard__section">
-                              <div class="dashboard__section__shell">
-                                <div class="dashboard__section__head">
-                                  <div class="dashboard__section__title">Последние отзывы</div><a class="dashboard__reviews-all" href="#">Смотреть все</a>
-                                </div>
-                                <div class="dashboard__reviews">
-                                  <div class="dashboard__reviews__review">
-                                    <div class="dashboard__reviews__review__name">Маркова Анна Федоровна</div>
-                                    <div class="dashboard__reviews__review__stars"><img class="dashboard__reviews__review__stars__star" src="/assets/img/star.svg"><img class="dashboard__reviews__review__stars__star" src="/assets/img/star.svg"><img class="dashboard__reviews__review__stars__star" src="/assets/img/star.svg"><img class="dashboard__reviews__review__stars__star" src="/assets/img/star.svg"><img class="dashboard__reviews__review__stars__star" src="/assets/img/star.svg"></div>
-                                    <div class="dashboard__reviews__review__time">2 дня назад</div>
-                                    <div class="dashboard__reviews__review__text">Озова Ф.М.-отличный,опытный врач.Постоянно наблюдаюсь только у нее,т.к до этого побывала у многих специалистов и однозначо могу сказать, что Озова это лучший из них во всей Москве!</div>
-                                  </div>
-                                  <div class="dashboard__reviews__review">
-                                    <div class="dashboard__reviews__review__name">Маркова Анна Федоровна</div>
-                                    <div class="dashboard__reviews__review__stars"><img class="dashboard__reviews__review__stars__star" src="/assets/img/star.svg"><img class="dashboard__reviews__review__stars__star" src="/assets/img/star.svg"><img class="dashboard__reviews__review__stars__star" src="/assets/img/star.svg"><img class="dashboard__reviews__review__stars__star" src="/assets/img/star.svg"><img class="dashboard__reviews__review__stars__star" src="/assets/img/star.svg"></div>
-                                    <div class="dashboard__reviews__review__time">2 дня назад</div>
-                                    <div class="dashboard__reviews__review__text">Озова Ф.М.-отличный,опытный врач.Постоянно наблюдаюсь только у нее,т.к</div>
-                                  </div>
-                                </div>
-                              </div>
+                          </div><a class="medical-center__third-level" href="#"><span class="medical-center__third-level__side"><span class="medical-center__third-level__point" style="background: #D75161"></span><span class="medical-center__third-level__name">Семейная на Каширской     </span><span class="medical-center__third-level__address">Россия, г. Москва, Каширское шоссе, д.56к1</span></span><span class="medical-center__third-level__side"><span class="medical-center__third-level__arrow"><svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L6 6.72L1 12" stroke="#70C9B9" stroke-linecap="round"/>
+</svg></span></span></a><a class="medical-center__third-level" href="#"><span class="medical-center__third-level__side"><span class="medical-center__third-level__point" style="background: var(--teal)"></span><span class="medical-center__third-level__name">Семейная на Полежаевской   </span><span class="medical-center__third-level__address">Россия, г. Москва, Хорошевское шоссе, д.80</span></span><span class="medical-center__third-level__side"><span class="medical-center__third-level__arrow"><svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L6 6.72L1 12" stroke="#70C9B9" stroke-linecap="round"/>
+</svg></span></span></a><a class="medical-center__third-level" href="#"><span class="medical-center__third-level__side"><span class="medical-center__third-level__point" style="background: var(--teal)"></span><span class="medical-center__third-level__name">Семейная на Киевской   </span><span class="medical-center__third-level__address">Россия, г. Москва, Брянская ул., д.3</span></span><span class="medical-center__third-level__side"><span class="medical-center__third-level__arrow"><svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L6 6.72L1 12" stroke="#70C9B9" stroke-linecap="round"/>
+</svg></span></span></a><a class="medical-center__third-level" href="#"><span class="medical-center__third-level__side"><span class="medical-center__third-level__point" style="background: var(--teal)"></span><span class="medical-center__third-level__name">Семейная на Измайловской   </span><span class="medical-center__third-level__address">Россия, г. Москва, Первомайская ул, д.42</span></span><span class="medical-center__third-level__side"><span class="medical-center__third-level__arrow"><svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L6 6.72L1 12" stroke="#70C9B9" stroke-linecap="round"/>
+</svg></span></span></a>
+                          <div class="medical-center__second-level">
+                            <div class="medical-center__second-level__side"><a class="medical-center__second-level__name" href="#">ООО "Мед 24 №1”</a></div>
+                            <div class="medical-center__second-level__side">
+                              <button class="btn">Добавить филиал</button><a class="medical-center__second-level__arrow" href="#"><svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L6 6.72L1 12" stroke="#70C9B9" stroke-linecap="round"/>
+</svg></a>
                             </div>
-                          </div>
-                          <div class="col-lg-6 mb-4">
-                            <div class="dashboard__section">
-                              <div class="dashboard__section__shell">
-                                <div class="dashboard__section__head">
-                                  <div class="dashboard__section__title">Специальности</div>
-                                </div>
-                                <div class="dashboard__specialties">
-                                  <div class="dashboard__specialties__line">
-                                    <div class="dashboard__specialties__column_1">
-                                      <div class="dashboard__specialties__head">Специальность</div>
-                                    </div>
-                                    <div class="dashboard__specialties__column_2">
-                                      <div class="dashboard__specialties__head">записей</div>
-                                    </div>
-                                    <div class="dashboard__specialties__column_3">
-                                      <div class="dashboard__specialties__head">% от общего числа</div>
-                                    </div>
-                                  </div>
-                                  <div class="dashboard__specialties__line">
-                                    <div class="dashboard__specialties__column_1">
-                                      <div class="dashboard__specialties__name">Гастроэнтеролог</div>
-                                    </div>
-                                    <div class="dashboard__specialties__column_2">
-                                      <div class="dashboard__specialties__number">36</div>
-                                    </div>
-                                    <div class="dashboard__specialties__column_3">
-                                      <div class="dashboard__specialties__number">10%</div>
-                                      <div class="dashboard__specialties__visual"> 
-                                        <div class="dashboard__specialties__visual__progress" style="width: 30%"></div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="dashboard__specialties__line">
-                                    <div class="dashboard__specialties__column_1">
-                                      <div class="dashboard__specialties__name">Офтальмолог</div>
-                                    </div>
-                                    <div class="dashboard__specialties__column_2">
-                                      <div class="dashboard__specialties__number">36</div>
-                                    </div>
-                                    <div class="dashboard__specialties__column_3">
-                                      <div class="dashboard__specialties__number">70%</div>
-                                      <div class="dashboard__specialties__visual"> 
-                                        <div class="dashboard__specialties__visual__progress" style="width: 70%"></div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="dashboard__specialties__line">
-                                    <div class="dashboard__specialties__column_1">
-                                      <div class="dashboard__specialties__name">Терапевт</div>
-                                    </div>
-                                    <div class="dashboard__specialties__column_2">
-                                      <div class="dashboard__specialties__number">36</div>
-                                    </div>
-                                    <div class="dashboard__specialties__column_3">
-                                      <div class="dashboard__specialties__number">70%</div>
-                                      <div class="dashboard__specialties__visual"> 
-                                        <div class="dashboard__specialties__visual__progress" style="width: 70%"></div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
+                          </div><a class="medical-center__third-level" href="#"><span class="medical-center__third-level__side"><span class="medical-center__third-level__point" style="background: #D75161"></span><span class="medical-center__third-level__name">Семейная на Киевской   </span><span class="medical-center__third-level__address">Россия, г. Москва, Брянская ул., д.3</span></span><span class="medical-center__third-level__side"><span class="medical-center__third-level__arrow"><svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L6 6.72L1 12" stroke="#70C9B9" stroke-linecap="round"/>
+</svg></span></span></a><a class="medical-center__third-level" href="#"><span class="medical-center__third-level__side"><span class="medical-center__third-level__point" style="background: var(--teal)"></span><span class="medical-center__third-level__name">Семейная на Измайловской   </span><span class="medical-center__third-level__address">Россия, г. Москва, Первомайская ул, д.42 </span></span><span class="medical-center__third-level__side"><span class="medical-center__third-level__arrow"><svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L6 6.72L1 12" stroke="#70C9B9" stroke-linecap="round"/>
+</svg></span></span></a><a class="medical-center__third-level" href="#"><span class="medical-center__third-level__side"><span class="medical-center__third-level__point" style="background: var(--teal)"></span><span class="medical-center__third-level__name">Семейная на Каширской   </span><span class="medical-center__third-level__address">Россия, г. Москва, Каширское шоссе, д.56к1</span></span><span class="medical-center__third-level__side"><span class="medical-center__third-level__arrow"><svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L6 6.72L1 12" stroke="#70C9B9" stroke-linecap="round"/>
+</svg></span></span></a><a class="medical-center__third-level" href="#"><span class="medical-center__third-level__side"><span class="medical-center__third-level__point" style="background: var(--teal)"></span><span class="medical-center__third-level__name">Семейная на Полежаевской   </span><span class="medical-center__third-level__address">Россия, г. Москва, Хорошевское шоссе, д.80</span></span><span class="medical-center__third-level__side"><span class="medical-center__third-level__arrow"><svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L6 6.72L1 12" stroke="#70C9B9" stroke-linecap="round"/>
+</svg></span></span></a>
+                          <div class="medical-center__second-level">
+                            <div class="medical-center__second-level__side"><a class="medical-center__second-level__name" href="#">ООО "Мед №2”</a></div>
+                            <div class="medical-center__second-level__side">
+                              <button class="btn">Добавить филиал</button><a class="medical-center__second-level__arrow" href="#"><svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L6 6.72L1 12" stroke="#70C9B9" stroke-linecap="round"/>
+</svg></a>
                             </div>
-                          </div>
-                          <div class="col-lg-6 mb-4">
-                            <div class="dashboard__section">
-                              <div class="dashboard__section__shell">
-                                <div class="dashboard__section__head">
-                                  <div class="dashboard__section__title">Источники записей</div>
-                                  <div class="dashboard__devices">
-                                    <div class="dashboard__devices__label dashboard__devices__label_desktop">компьютер</div>
-                                    <div class="dashboard__devices__label dashboard__devices__label_phone">смартфон</div>
-                                  </div>
-                                </div><canvas class="dashboard__chart dashboard__chart_3" id="myChart3"></canvas>
-                              </div>
-                            </div>
-                          </div>
+                          </div><a class="medical-center__third-level" href="#"><span class="medical-center__third-level__side"><span class="medical-center__third-level__point" style="background: #D75161"></span><span class="medical-center__third-level__name">Семейная на Каширской   </span><span class="medical-center__third-level__address">Россия, г. Москва, Каширское шоссе, д.56к1</span></span><span class="medical-center__third-level__side"><span class="medical-center__third-level__arrow"><svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L6 6.72L1 12" stroke="#70C9B9" stroke-linecap="round"/>
+</svg></span></span></a><a class="medical-center__third-level" href="#"><span class="medical-center__third-level__side"><span class="medical-center__third-level__point" style="background: var(--teal)"></span><span class="medical-center__third-level__name">Семейная на Полежаевской   </span><span class="medical-center__third-level__address">Россия, г. Москва, Хорошевское шоссе, д.80</span></span><span class="medical-center__third-level__side"><span class="medical-center__third-level__arrow"><svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L6 6.72L1 12" stroke="#70C9B9" stroke-linecap="round"/>
+</svg></span></span></a><a class="medical-center__third-level" href="#"><span class="medical-center__third-level__side"><span class="medical-center__third-level__point" style="background: var(--teal)"></span><span class="medical-center__third-level__name">Семейная на Киевской   </span><span class="medical-center__third-level__address">Россия, г. Москва, Брянская ул., д.3</span></span><span class="medical-center__third-level__side"><span class="medical-center__third-level__arrow"><svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L6 6.72L1 12" stroke="#70C9B9" stroke-linecap="round"/>
+</svg></span></span></a><a class="medical-center__third-level" href="#"><span class="medical-center__third-level__side"><span class="medical-center__third-level__point" style="background: var(--teal)"></span><span class="medical-center__third-level__name">Семейная на Измайловской   </span><span class="medical-center__third-level__address">Россия, г. Москва, Первомайская ул, д.42</span></span><span class="medical-center__third-level__side"><span class="medical-center__third-level__arrow"><svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L6 6.72L1 12" stroke="#70C9B9" stroke-linecap="round"/>
+</svg></span></span></a>
                         </div>
                       </div>
                     </div>
@@ -382,7 +217,7 @@
           </div>
         </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.2.1/dist/chart.min.js"></script>
-    <script src="/assets/js/common.js?v-1622575823209"></script><script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="/assets/js/common.js?v-1622575823216"></script><script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </body>

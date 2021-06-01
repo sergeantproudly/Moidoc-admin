@@ -1,0 +1,92 @@
+.records
+    overflow-x: auto
+    &__scroll
+    &__head
+        padding: 15px 0
+        font-weight: 700
+        font-size: 10px
+        line-height: 12px
+        text-transform: uppercase
+        color: #98A2A7
+        border-top: 1px solid #ECEEEF
+        border-bottom: 1px solid #ECEEEF
+    &__head,
+    &__line
+        display: flex
+        align-items: center
+        align-content: center
+        justify-content: flex-start
+    &__line
+        border-bottom: 1px solid #ECEEEF
+        padding: 11px 0
+    &__sort
+        cursor: pointer
+    &__col-type
+        min-width: 40px
+        width: 7%
+    &__col-name
+        min-width: 189px
+        width: 17%
+    &__col-phone
+        min-width: 155px
+        width: 14%
+    &__col-doctor
+        min-width: 191px
+        width: 17%
+    &__col-role
+        min-width: 171px
+        width: 16%
+    &__col-source
+        min-width: 160px
+        width: 14%
+    &__col-date
+        min-width: 170px
+        width: 16%
+    &__col-rate
+        min-width: 80px
+        width: 7%
+
+    &__sort-desc,
+    &__sort-asc
+        vertical-align: middle
+        display: inline-block
+        margin: 0 0 0 6px
+        transform: translateY(-2px)
+
+    &__type
+        width: 22px
+        height: 22px
+        display: flex
+        align-content: center
+        align-items: center
+        justify-content: center
+        svg
+            max-width: 100%
+            max-height: 100%
+    &__name
+    &__phone
+        &, 
+        &:hover
+            color: inherit
+            text-decoration: none
+    &__doctor
+        display: flex
+        align-content: center
+        align-items: center
+        justify-content: flex-start
+        &__avatar
+            width: 32px
+            height: 32px
+            border-radius: 50%
+        &__name
+            padding: 0 0 0 11px
+    &__role
+        &_empty
+            color: #98A2A7
+    &__date
+    &__source
+    &__rate 
+        &__star
+            margin: 0 2px 0 0
+            &:last-child
+                margin: 0
