@@ -1,0 +1,55 @@
+extends ../includes/template.pug
+
+block seo
+    title !{'Админ-панель Мой Доктор'}
+
+block content
+    .login-page
+        .login-page__center
+            div(
+                style="display: none"
+            ).login-page__send-link
+                a(href="#").login-page__send-link__illustration
+                    img(src=`${url}assets/img/success.svg`).login-page__send-link__illustration__picture
+                p.login-page__send-link__title Ссылка на восстановление пароля отправлена на ваш e-mail.
+                p.login-page__send-link__description Не забудьте проверить папку спама, если не обнаружили ничего во входящих
+            .login-page__forms-step
+                div(
+                ).login-page__head
+                    a(href="#").login-page__logo
+                        img(src=`${url}assets/img/logo.svg`).login-page__logo__picture
+                    div(
+                        style="display: none"
+                    ).login-page__forget-password-step
+                        p.login-page__note Введите e-mail, данный при регистрации 
+                        .login-page__form
+                            input(placeholder="E-mail").default-input.default-input_full
+                            button(
+                                onclick="document.querySelector('.login-page__forms-step').style.display = 'none';document.querySelector('.login-page__send-link').style.display = 'block';"
+                            ).btn.btn_full Восстановить пароль
+                            button(
+                                onclick="document.querySelector('.login-page__login-step').style.display = 'block';document.querySelector('.login-page__forget-password-step').style.display = 'none';"
+                            ).login-page__form__forget-password Я вспомнил пароль
+                    div(
+                    ).login-page__login-step
+                        .login-page__form
+                            input(placeholder="E-mail").default-input.default-input_full
+                            // Атрибут error для отображения ошибки
+                            input( type="password" placeholder="Пароль" value="value").default-input.default-input_full
+                            button(disabled).btn.btn_full Войти
+                            button(
+                                onclick="document.querySelector('.login-page__login-step').style.display = 'none';document.querySelector('.login-page__forget-password-step').style.display = 'block';"
+                            ).login-page__form__forget-password Забыли пароль?
+                div(
+                ).login-page__support
+                    .login-page__support__illustration
+                        img(src=`${url}assets/img/support.svg`).login-page__support__illustration__picture
+                    p.login-page__support__title Служба поддержки
+                    a(href="tel:88009453733").login-page__support__phone + 7 (800) 945-37-33
+                    .login-page__support__mails
+                        a(href="mailto:suport@moidoc.ru").login-page__support__mails__mail
+                            .login-page__support__mails__mail__name Обратная связь
+                            .login-page__support__mails__mail__link suport@moidoc.ru
+                        a(href="mailto:suport@moidoc.ru").login-page__support__mails__mail
+                            .login-page__support__mails__mail__name Техническая поддержка
+                            .login-page__support__mails__mail__link suport@moidoc.ru

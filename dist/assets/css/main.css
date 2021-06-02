@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @media (max-width: 767px) {
   .container-md-full {
     max-width: 100% !important;
@@ -54,7 +55,8 @@ body {
 :root {
   --teal: #70c9b9;
   --lightteal: #eef9f7;
-  --strongteal: #5DBDAC;
+  --strongteal: #5dbdac;
+  --danger: #d75161;
 }
 
 .skeleton {
@@ -974,11 +976,16 @@ body {
   box-shadow: none !important;
 }
 
+.btn_full {
+  width: 100%;
+}
+
 .btn:hover {
   background-color: var(--strongteal);
   border: none !important;
   outline: none !important;
   box-shadow: none !important;
+  cursor: pointer;
 }
 
 .btn:active {
@@ -1072,6 +1079,10 @@ body {
   margin: 0 6px 0 0;
 }
 
+.default-select__label_mobile {
+  display: none;
+}
+
 .default-select__select {
   vertical-align: middle;
   -webkit-appearance: none;
@@ -1102,28 +1113,19 @@ body {
   width: 150px;
 }
 
-.default-label {
-  display: block;
-  margin: 0 0 22px 0;
-}
-
-.default-label__title {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
-  display: block;
-  margin: 0 0 7px 0;
-  text-transform: uppercase;
-  min-height: 24px;
-}
-
-.default-label__title_fz10 {
-  font-size: 10px;
-}
-
-@media (max-width: 991px) {
-  .default-label__title:empty {
+@media (max-width: 575px) {
+  .default-select__label_desktop {
     display: none;
+  }
+  .default-select__label_mobile {
+    display: inline-block;
+  }
+  .default-select_mobile-full,
+  .default-select_mobile-full .default-select__select {
+    width: 100%;
+  }
+  .default-select_very-short .default-select__select {
+    width: 111px;
   }
 }
 
@@ -1146,9 +1148,64 @@ body {
   font-size: 10px;
 }
 
-@media (max-width: 991px) {
+.default-label__title_mobile {
+  display: none;
+}
+
+@media (max-width: 575px) {
   .default-label__title:empty {
     display: none;
+  }
+  .default-label_mobile-full {
+    margin-right: 0 !important;
+    width: 100%;
+  }
+  .default-label__title {
+    min-height: auto;
+    line-height: inherit;
+  }
+  .default-label__title_mobile {
+    display: block;
+  }
+}
+
+.default-label {
+  display: block;
+  margin: 0 0 22px 0;
+}
+
+.default-label__title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  display: block;
+  margin: 0 0 7px 0;
+  text-transform: uppercase;
+  min-height: 24px;
+}
+
+.default-label__title_fz10 {
+  font-size: 10px;
+}
+
+.default-label__title_mobile {
+  display: none;
+}
+
+@media (max-width: 575px) {
+  .default-label__title:empty {
+    display: none;
+  }
+  .default-label_mobile-full {
+    margin-right: 0 !important;
+    width: 100%;
+  }
+  .default-label__title {
+    min-height: auto;
+    line-height: inherit;
+  }
+  .default-label__title_mobile {
+    display: block;
   }
 }
 
@@ -1205,6 +1262,24 @@ body {
   width: 300px;
   max-width: 100%;
   padding: 0 11px;
+  transition: 0.25s;
+}
+
+.default-input_full {
+  width: 100%;
+}
+
+.default-input:focus {
+  border: 1px solid var(--teal);
+}
+
+.default-input[error] {
+  border: 1px solid var(--danger);
+  color: var(--danger);
+}
+
+.default-input[error]::placeholder {
+  color: var(--danger);
 }
 
 .fake-choose-date {
@@ -1248,13 +1323,13 @@ body {
 
 .default-labels label:first-child,
 .default-labels > * {
-  margin: 0 28px 22px 0 !important;
+  margin: 0 28px 22px 0;
 }
 
 @media (max-width: 991px) {
   .default-labels label:first-child,
   .default-labels > * {
-    margin: 0 12px 22px 0 !important;
+    margin: 0 12px 16px 0;
   }
 }
 
@@ -1561,6 +1636,67 @@ body {
   margin: 0;
 }
 
+@media (max-width: 767px) {
+  .records__head {
+    display: none;
+  }
+  .records__line {
+    flex-wrap: wrap;
+  }
+  .records__line:first-child {
+    border-top: 1px solid #ECEEEF;
+  }
+  .records__type, .records__name, .records__phone, .records__doctor, .records__role, .records__date, .records__source, .records__rate {
+    display: inline-flex;
+    vertical-align: middle;
+  }
+  .records__col-type, .records__col-phone, .records__col-doctor, .records__col-role, .records__col-source, .records__col-date, .records__col-rate {
+    align-items: center;
+    align-content: center;
+  }
+  .records__col-name {
+    align-items: flex-start;
+    align-content: flex-start;
+  }
+  .records__col-type, .records__col-name, .records__col-phone, .records__col-doctor, .records__col-role, .records__col-source, .records__col-date, .records__col-rate {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    margin: 0 0 12px 0;
+  }
+  .records__col-type::before, .records__col-name::before, .records__col-phone::before, .records__col-doctor::before, .records__col-role::before, .records__col-source::before, .records__col-date::before, .records__col-rate::before {
+    margin: 0 10px 0 0;
+    display: inline-block;
+    vertical-align: middle;
+    color: #98A2A7;
+    min-width: 120px;
+  }
+  .records__col-type::before {
+    content: "Тип:";
+  }
+  .records__col-name::before {
+    content: "Имя:";
+  }
+  .records__col-phone::before {
+    content: "Телефон:";
+  }
+  .records__col-doctor::before {
+    content: "Доктор:";
+  }
+  .records__col-role::before {
+    content: "Специальность:";
+  }
+  .records__col-date::before {
+    content: "Дата и время:";
+  }
+  .records__col-source::before {
+    content: "Источник:";
+  }
+  .records__col-rate::before {
+    content: "Оценка:";
+  }
+}
+
 .reports-page__description {
   margin: 0 0 31px 0;
 }
@@ -1601,4 +1737,207 @@ body {
 
 .records-page .default-labels {
   margin: 0 0 17px 0;
+}
+
+.login-page {
+  background-image: url("../img/login-page.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  padding: 15px;
+}
+
+.login-page__center {
+  width: 465px;
+  max-width: 100%;
+  background: #FFFFFF;
+  box-shadow: 0px 16px 45px rgba(44, 62, 70, 0.09);
+  border-radius: 9px;
+}
+
+.login-page__note {
+  text-align: center;
+  font-size: 14px;
+  line-height: 24px;
+  color: #3D5055;
+  margin: 0 0 18px 0;
+}
+
+.login-page__head {
+  padding: 28px 57px 22px 57px;
+}
+
+.login-page__logo {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 28px 0;
+  transition: 0.25s;
+}
+
+.login-page__logo:hover {
+  opacity: 0.75;
+}
+
+.login-page__logo__picuture {
+  display: block;
+}
+
+.login-page__form .default-input {
+  margin: 0 0 10px 0;
+}
+
+.login-page__form .btn {
+  margin: 6px 0 20px 0;
+}
+
+.login-page__form__forget-password {
+  background-color: transparent;
+  border: none;
+  font-size: 14px;
+  color: #98A2A7;
+  width: 100%;
+  transition: 0.25s;
+}
+
+.login-page__form__forget-password:hover {
+  opacity: 0.75;
+  cursor: pointer;
+}
+
+.login-page__support {
+  background-color: rgba(140, 220, 206, 0.1);
+  padding: 17px 0 0 0;
+  border-radius: 0 0 9px 9px;
+}
+
+.login-page__support__illustration {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  margin: 0 0 2px 0;
+}
+
+.login-page__support__illustration__picture {
+  display: block;
+}
+
+.login-page__support__title {
+  margin: 0 0 5px 0;
+  text-align: center;
+  font-size: 14px;
+  line-height: 17px;
+  color: #98A2A7;
+}
+
+.login-page__support__phone {
+  text-align: center;
+  font-weight: 500;
+  font-size: 19px;
+  line-height: 24px;
+  display: block;
+  margin: 0 0 20px 0;
+  transition: 0.25s;
+}
+
+.login-page__support__phone, .login-page__support__phone:hover {
+  color: #3D5055;
+}
+
+.login-page__support__phone:hover {
+  text-decoration: none;
+  opacity: 0.75;
+}
+
+.login-page__support__mails {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
+  flex-wrap: wrap;
+  border-top: 1px solid #DBECEA;
+}
+
+.login-page__support__mails__mail {
+  width: 50%;
+  text-align: center;
+  padding: 16px 0 20px 0;
+}
+
+.login-page__support__mails__mail:first-child {
+  border-right: 1px solid #DBECEA;
+}
+
+.login-page__support__mails__mail:hover {
+  text-decoration: none;
+  background-color: rgba(219, 236, 234, 0.3);
+  transition: 0.25s;
+}
+
+.login-page__support__mails__mail__name {
+  margin: 0 0 1px 0;
+  line-height: 17px;
+  font-size: 14px;
+}
+
+.login-page__support__mails__mail__name, .login-page__support__mails__mail__name:hover {
+  color: #98A2A7;
+}
+
+.login-page__support__mails__mail__link {
+  line-height: 24px;
+}
+
+.login-page__support__mails__mail__link, .login-page__support__mails__mail__link:hover {
+  color: var(--teal);
+}
+
+.login-page__send-link {
+  padding: 71px 77px 77px 77px;
+}
+
+.login-page__send-link__illustration {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  margin: 0 0 15px 0;
+}
+
+.login-page__send-link__illustration__picture {
+  display: block;
+}
+
+.login-page__send-link__title {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+  text-align: center;
+  margin: 0 0 15px 0;
+}
+
+.login-page__send-link__description {
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .login-page__head {
+    padding: 22px 22px 22px 22px;
+  }
+  .login-page__send-link {
+    padding: 71px 22px 77px 22px;
+  }
+  .login-page__support__mails__mail {
+    width: 100%;
+  }
+  .login-page__support__mails__mail:first-child {
+    border-right: none;
+    border-bottom: 1px solid #DBECEA;
+  }
 }

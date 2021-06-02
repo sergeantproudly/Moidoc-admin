@@ -756,28 +756,28 @@ mixin records()
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M12.4151 11.1912L16.7472 15.524C17.0842 15.8611 17.0853 16.4065 16.7444 16.7475C16.4058 17.0861 15.852 17.0813 15.5211 16.7503L11.1891 12.4175C8.46815 14.5354 4.53239 14.3437 2.03143 11.8423C-0.677144 9.13319 -0.677144 4.7409 2.03143 2.03181C4.74001 -0.677271 9.13148 -0.677271 11.8401 2.03181C14.341 4.53324 14.5327 8.46974 12.4151 11.1912ZM10.614 10.616C12.6454 8.58415 12.6454 5.28993 10.614 3.25812C8.58254 1.22631 5.28894 1.22631 3.25751 3.25812C1.22608 5.28993 1.22608 8.58415 3.25751 10.616C5.28894 12.6478 8.58254 12.6478 10.614 10.616Z" fill="#70C9B9"/>
                     </svg>
             .default-labels
-                div.default-label
+                div.default-label.default-label_mobile-full
                     span.default-label__title.default-label__title_fz10 Тип приема
-                    label.default-select.default-select_short
+                    label.default-select.default-select_short.default-select_mobile-full
                         select(
                         ).default-select__select
                             option() Выбрать
                             option 1
                             option 2
-                div.default-label
+                div.default-label.default-label_mobile-full
                     span.default-label__title.default-label__title_fz10 филиал
-                    label.default-select.default-select_short
+                    label.default-select.default-select_short.default-select_mobile-full
                         select(
                         ).default-select__select
                             option() Выбрать
                             option 1
                             option 2
-                div.default-label
+                div.default-label.default-label_mobile-full
                     span.default-label__title.default-label__title_fz10 оценка приема
-                    label.default-select.default-select_middle
+                    label.default-select.default-select_short.default-select_mobile-full
                         select(
                         ).default-select__select
-                            option() Выбрать
+                            option Выбрать
                             option 1
                             option 2
                 div.default-label
@@ -787,14 +787,16 @@ mixin records()
                         button.toggles__toggle Месяц
                 label.default-label
                     span.default-label__title.default-label__title_fz10
+                    span.default-label__title.default-label__title_mobile.default-label__title_fz10 Период
                     .default-selects
-                        label.default-select.default-select_short
-                            span.default-select__label Период с
+                        label.default-select.default-select_short.default-select_very-short
+                            span.default-select__label.default-select__label_desktop Период с
+                            span.default-select__label.default-select__label_mobile с
                             select(
                             ).default-select__select
                                 option 1
                                 option 2
-                        label.default-select.default-select_short
+                        label.default-select.default-select_short.default-select_very-short
                             span.default-select__label по
                             select(
                             ).default-select__select
@@ -823,7 +825,7 @@ mixin records()
                                         <path d="M14.8831 10.0429C13.7142 10.0429 12.7669 10.9989 12.7669 12.1782C12.7669 13.1554 13.4174 13.9772 14.3045 14.2316V14.3137C14.3045 16.2538 12.7403 17.8323 10.8177 17.8323C8.90444 17.8323 7.34619 16.269 7.33115 14.3413C7.33173 14.3322 7.33173 14.3227 7.33173 14.3135V12.816C10.2334 12.5221 12.5065 10.0439 12.5065 7.03964V4.06886C12.5065 2.81633 11.577 1.78118 10.378 1.62198C10.18 1.25164 9.79233 1 9.34627 1C8.69925 1 8.1745 1.52935 8.1745 2.18208C8.1745 2.83501 8.69925 3.36436 9.34627 3.36436C9.76842 3.36436 10.1377 3.13783 10.3441 2.7994C10.9186 2.93154 11.3494 3.44999 11.3494 4.06886V7.03983C11.3494 9.59744 9.28764 11.6779 6.75317 11.6779C4.2189 11.6779 2.15711 9.59744 2.15711 7.03983V4.06886C2.15711 3.4498 2.58756 2.93134 3.16245 2.7994C3.36842 3.13783 3.73754 3.36436 4.16027 3.36436C4.8071 3.36436 5.33166 2.83501 5.33166 2.18208C5.33166 1.52935 4.8071 1 4.16027 1C3.71401 1 3.32638 1.25164 3.12832 1.62198C1.92916 1.78118 1 2.81633 1 4.06886V7.03983C1 10.0443 3.27296 12.5223 6.17462 12.8162V14.2837C6.17423 14.2937 6.17384 14.3036 6.17384 14.3137C6.17384 16.8976 8.25723 19 10.8177 19C13.3782 19 15.4616 16.8976 15.4616 14.3137V14.2316C16.3487 13.9772 17 13.1556 17 12.1782C16.9998 10.9989 16.0517 10.0429 14.8831 10.0429ZM14.8827 13.3099C14.2634 13.3099 13.7614 12.8029 13.7614 12.1784C13.7614 11.5523 14.2636 11.0469 14.8827 11.0469C15.5031 11.0469 16.0051 11.5525 16.0051 12.1784C16.0051 12.8027 15.5031 13.3099 14.8827 13.3099Z" fill="#70C9B9" stroke="#70C9B9" stroke-width="0.5"/>
                                     </svg>
                             .records__col-name 
-                                .records__name Маркова Анна
+                                .records__name Маркова Анна Владимировна
                             .records__col-phone
                                 a(href="#").records__phone +7 925 766-87-09
                             .records__col-doctor

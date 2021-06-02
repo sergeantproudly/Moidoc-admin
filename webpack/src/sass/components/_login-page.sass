@@ -1,0 +1,142 @@
+.login-page
+    background-image: url('../img/login-page.jpg')
+    background-size: cover
+    background-position: center
+    min-height: 100vh
+    display: flex
+    align-items: center
+    align-content: center
+    justify-content: center
+    padding: 15px
+    &__center
+        width: 465px
+        max-width: 100%
+        background: #FFFFFF
+        box-shadow: 0px 16px 45px rgba(44, 62, 70, 0.09)
+        border-radius: 9px
+    &__note
+        text-align: center
+        font-size: 14px
+        line-height: 24px
+        color: #3D5055
+        margin: 0 0 18px 0
+    &__head
+        padding: 28px 57px 22px 57px
+    &__logo
+        display: flex
+        justify-content: center
+        margin: 0 0 28px 0
+        transition: 0.25s
+        &:hover
+            opacity: 0.75
+        &__picuture
+            display: block
+    &__form
+        .default-input
+            margin: 0 0 10px 0
+        .btn
+            margin: 6px 0 20px 0
+        &__forget-password
+            background-color: transparent
+            border: none
+            font-size: 14px
+            color: #98A2A7
+            width: 100%
+            transition: 0.25s
+            &:hover
+                opacity: 0.75
+                cursor: pointer
+    &__support
+        background-color: rgba(140, 220, 206, 0.1)
+        padding: 17px 0 0 0
+        border-radius: 0 0 9px 9px
+        &__illustration
+            display: flex
+            align-items: center
+            align-content: center
+            justify-content: center
+            margin: 0 0 2px 0
+            &__picture
+                display: block
+        &__title
+            margin: 0 0 5px 0
+            text-align: center
+            font-size: 14px
+            line-height: 17px
+            color: #98A2A7
+        &__phone
+            text-align: center
+            font-weight: 500
+            font-size: 19px
+            line-height: 24px
+            display: block
+            margin: 0 0 20px 0
+            transition: 0.25s
+            &,
+            &:hover
+                color: #3D5055
+            &:hover
+                text-decoration: none
+                opacity: 0.75
+        &__mails
+            display: flex
+            justify-content: flex-start
+            align-items: stretch
+            align-content: stretch
+            flex-wrap: wrap
+            border-top: 1px solid #DBECEA
+            &__mail
+                width: 50%
+                text-align: center
+                padding: 16px 0 20px 0
+                &:first-child
+                    border-right: 1px solid #DBECEA
+                &:hover
+                    text-decoration: none
+                    background-color: rgba(219, 236, 234, 0.3)
+                    transition: 0.25s
+                &__name
+                    margin: 0 0 1px 0
+                    line-height: 17px
+                    font-size: 14px
+                    &,
+                    &:hover
+                        color: #98A2A7
+                &__link    
+                    line-height: 24px  
+                    &,
+                    &:hover
+                        color: var(--teal)
+    &__send-link
+        padding: 71px 77px 77px 77px
+        &__illustration
+            display: flex
+            align-items: center
+            align-content: center
+            justify-content: center
+            margin: 0 0 15px 0
+            &__picture
+                display: block
+        &__title
+            font-weight: 500
+            font-size: 18px
+            line-height: 23px
+            text-align: center
+            margin: 0 0 15px 0
+        &__description 
+            font-size: 14px
+            line-height: 16px
+            text-align: center
+@media (max-width: #{$sm}px)
+    .login-page
+        &__head
+            padding: 22px 22px 22px 22px
+        &__send-link
+            padding: 71px 22px 77px 22px
+        &__support
+            &__mails
+                &__mail
+                    width: 100%
+                    &:first-child
+                        border-right: none
+                        border-bottom: 1px solid #DBECEA

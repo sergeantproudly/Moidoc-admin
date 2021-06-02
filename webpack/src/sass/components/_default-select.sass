@@ -2,6 +2,9 @@
     &__label
         vertical-align: middle
         margin: 0 6px 0 0
+        &_desktop
+        &_mobile
+            display: none
     &__select
         vertical-align: middle
         -webkit-appearance: none
@@ -24,3 +27,15 @@
         width: 126px
     &_middle &__select
         width: 150px
+@media (max-width: #{$xs}px)
+    .default-select
+        &__label
+            &_desktop
+                display: none
+            &_mobile
+                display: inline-block
+        &_mobile-full,
+        &_mobile-full &__select
+            width: 100%
+        &_very-short &__select
+            width: 111px

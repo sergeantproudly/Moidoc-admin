@@ -11,7 +11,19 @@
         min-height: 24px
         &_fz10
             font-size: 10px
+        &_mobile
+            display: none
 @media (max-width: #{$md}px)
+    .default-label
+@media (max-width: #{$xs}px)
     .default-label
         &__title:empty
             display: none
+        &_mobile-full
+            margin-right: 0 !important
+            width: 100%
+        &__title
+            min-height: auto
+            line-height: inherit
+            &_mobile
+                display: block

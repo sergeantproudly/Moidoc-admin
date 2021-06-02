@@ -90,3 +90,78 @@
             margin: 0 2px 0 0
             &:last-child
                 margin: 0
+@media (max-width: #{$sm}px)
+    .records
+        &__head
+            display: none
+        &__line
+            flex-wrap: wrap
+            &:first-child
+                border-top: 1px solid #ECEEEF
+
+        &__type,
+        &__name,
+        &__phone,
+        &__doctor,
+        &__role,
+        &__date,
+        &__source,
+        &__rate 
+            display: inline-flex
+            vertical-align: middle
+
+        &__col-type,
+        &__col-phone,
+        &__col-doctor,
+        &__col-role,
+        &__col-source,
+        &__col-date,
+        &__col-rate
+            align-items: center
+            align-content: center
+        &__col-name,
+            align-items: flex-start
+            align-content: flex-start
+
+        &__col-type,
+        &__col-name,
+        &__col-phone,
+        &__col-doctor,
+        &__col-role,
+        &__col-source,
+        &__col-date,
+        &__col-rate
+            display: flex
+            justify-content: flex-start
+            width: 100%
+            margin: 0 0 12px 0
+            &::before
+                margin: 0 10px 0 0
+                display: inline-block
+                vertical-align: middle
+                color: #98A2A7
+                min-width: 120px
+        &__col-type
+            &::before
+                content: "Тип:"
+        &__col-name
+            &::before
+                content: "Имя:"
+        &__col-phone
+            &::before
+                content: "Телефон:"
+        &__col-doctor
+            &::before
+                content: "Доктор:"
+        &__col-role
+            &::before
+                content: "Специальность:"
+        &__col-date
+            &::before
+                content: "Дата и время:"
+        &__col-source
+            &::before
+                content: "Источник:"
+        &__col-rate
+            &::before
+                content: "Оценка:"

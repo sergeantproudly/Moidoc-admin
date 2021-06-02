@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Админ-панель Мой Доктор</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="icon" sizes="16x16 32x32 64x64" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="/assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/assets/favicon/safari-pinned-tab.svg&quot; color=&quot;#5bbad5"><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="/assets/css/main.css?v-1622658967555" rel="stylesheet">
+  </head>
+  <body>
+    <div class="login-page">
+      <div class="login-page__center">
+        <div class="login-page__send-link" style="display: none"><a class="login-page__send-link__illustration" href="#"><img class="login-page__send-link__illustration__picture" src="/assets/img/success.svg"></a>
+          <p class="login-page__send-link__title">Ссылка на восстановление пароля отправлена на ваш e-mail.</p>
+          <p class="login-page__send-link__description">Не забудьте проверить папку спама, если не обнаружили ничего во входящих</p>
+        </div>
+        <div class="login-page__forms-step">
+          <div class="login-page__head"><a class="login-page__logo" href="#"><img class="login-page__logo__picture" src="/assets/img/logo.svg"></a>
+            <div class="login-page__forget-password-step" style="display: none">
+              <p class="login-page__note">Введите e-mail, данный при регистрации </p>
+              <div class="login-page__form">
+                <input class="default-input default-input_full" placeholder="E-mail">
+                <button class="btn btn_full" onclick="document.querySelector('.login-page__forms-step').style.display = 'none';document.querySelector('.login-page__send-link').style.display = 'block';">Восстановить пароль</button>
+                <button class="login-page__form__forget-password" onclick="document.querySelector('.login-page__login-step').style.display = 'block';document.querySelector('.login-page__forget-password-step').style.display = 'none';">Я вспомнил пароль</button>
+              </div>
+            </div>
+            <div class="login-page__login-step">
+              <div class="login-page__form">
+                <input class="default-input default-input_full" placeholder="E-mail">
+                <!-- Атрибут error для отображения ошибки-->
+                <input class="default-input default-input_full" type="password" placeholder="Пароль" value="value">
+                <button class="btn btn_full" disabled>Войти</button>
+                <button class="login-page__form__forget-password" onclick="document.querySelector('.login-page__login-step').style.display = 'none';document.querySelector('.login-page__forget-password-step').style.display = 'block';">Забыли пароль?</button>
+              </div>
+            </div>
+          </div>
+          <div class="login-page__support">
+            <div class="login-page__support__illustration"><img class="login-page__support__illustration__picture" src="/assets/img/support.svg"></div>
+            <p class="login-page__support__title">Служба поддержки</p><a class="login-page__support__phone" href="tel:88009453733">+ 7 (800) 945-37-33</a>
+            <div class="login-page__support__mails"><a class="login-page__support__mails__mail" href="mailto:suport@moidoc.ru">
+                <div class="login-page__support__mails__mail__name">Обратная связь</div>
+                <div class="login-page__support__mails__mail__link">suport@moidoc.ru</div></a><a class="login-page__support__mails__mail" href="mailto:suport@moidoc.ru">
+                <div class="login-page__support__mails__mail__name">Техническая поддержка</div>
+                <div class="login-page__support__mails__mail__link">suport@moidoc.ru</div></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.2.1/dist/chart.min.js"></script>
+    <script src="/assets/js/common.js?v-1622658967555"></script><script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
