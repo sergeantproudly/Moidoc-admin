@@ -9,7 +9,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
     <link rel="manifest" href="/assets/favicon/site.webmanifest">
     <link rel="mask-icon" href="/assets/favicon/safari-pinned-tab.svg&quot; color=&quot;#5bbad5"><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link href="/assets/css/main.css?v-1622658967564" rel="stylesheet">
+    <link href="/assets/css/main.css?v-1622705450589" rel="stylesheet">
   </head>
   <body>
         <div class="container-fluid">
@@ -82,12 +82,93 @@
             </div>
             <div class="col-lg-10 col-md-10 col-sm-9 p-0 skeleton__indent">
               <div class="skeleton__right">
+                    <div class="skeleton__right__head skeleton__head_right">
+                      <div class="skeleton__right__side">
+                        <button class="skeleton__burger" onclick="toggleMobileMenu(this)"><span class="skeleton__burger__line"></span></button>
+                        <p class="skeleton__headline"> <span>Медицина 24/7</span><span>ООО "ССМЦ" </span><span>Медицина 24/7 на Трубной</span></p>
+                      </div>
+                      <div class="skeleton__right__side"><a class="skeleton__logout skeleton__logout_mobile" href="#">
+                           <svg class="skeleton__logout__icon" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M2.00276 0C0.893543 0 0 0.894276 0 1.99742V17.0026C0 18.1091 0.896666 19 2.00276 19H10.9972C12.1065 19 13 18.1057 13 17.0026V1.99742C13 0.890925 12.1033 0 10.9972 0H2.00276ZM1 17.0026V1.99742C1 1.44584 1.44655 1 2.00276 1H10.9972C11.5531 1 12 1.44523 12 1.99742V17.0026C12 17.5542 11.5534 18 10.9972 18H2.00276C1.44693 18 1 17.5548 1 17.0026Z" fill="#70C9B9"/>
+<rect x="7" y="9" width="12" height="1" fill="#70C9B9"/>
+<path d="M16 6L19.5 9.5L16 13" stroke="#70C9B9"/>
+</svg></a></div>
+                    </div>
+                    <div class="skeleton__right__content">
+                      <div class="reports-page default-wrap-page">
+                        <div class="reports-page__top">
+                          <h1 class="headline-page">Отчеты</h1>
+                          <p class="reports-page__description">Здесь можно скачать отчет — расчет выплат докторам за проведение онлайн-консультаций на платформе Мой Доктор. <br>Отчет за предыдущий месяц доступен с 3-го числа следующего месяца.</p>
+                          <div class="default-labels">
+                            <div class="default-label"><span class="default-label__title default-label__title_fz10">Выберите медцентр</span>
+                              <label class="default-select">
+                                <select class="default-select__select">
+                                  <option disabled>Выбрать</option>
+                                  <option>1</option>
+                                  <option>2</option>
+                                </select>
+                              </label>
+                            </div>
+                            <div class="default-label"><span class="default-label__title default-label__title_fz10">Выберите юр.лицо</span>
+                              <label class="default-select">
+                                <select class="default-select__select">
+                                  <option disabled>Выбрать</option>
+                                  <option>1</option>
+                                  <option>2</option>
+                                </select>
+                              </label>
+                            </div>
+                            <div class="default-label"><span class="default-label__title default-label__title_fz10">Выберите филиал</span>
+                              <label class="default-select">
+                                <select class="default-select__select">
+                                  <option disabled>Выбрать</option>
+                                  <option>1</option>
+                                  <option>2</option>
+                                </select>
+                              </label>
+                            </div>
+                          </div>
+                          <label class="default-label"><span class="default-label__title default-label__title_fz10">Выберите период</span>
+                            <div class="default-selects">
+                              <label class="default-select default-select_short"><span class="default-select__label">с</span>
+                                <select class="default-select__select">
+                                  <option>1</option>
+                                  <option>2</option>
+                                </select>
+                              </label>
+                              <label class="default-select default-select_short"><span class="default-select__label">по</span>
+                                <select class="default-select__select">
+                                  <option>2</option>
+                                  <option>1</option>
+                                </select>
+                              </label>
+                            </div>
+                          </label>
+                          <label class="default-label"><span class="default-label__title default-label__title_fz10">Формат отчета</span>
+                            <div class="default-checkboxes">
+                              <label class="default-checkboxes__checkbox">
+                                <input class="default-checkboxes__checkbox__input" type="radio" name="1" checked><span class="default-checkboxes__checkbox__square"></span><span class="default-checkboxes__checkbox__name">XLS </span>
+                              </label>
+                              <label class="default-checkboxes__checkbox">
+                                <input class="default-checkboxes__checkbox__input" type="radio" name="1"><span class="default-checkboxes__checkbox__square"></span><span class="default-checkboxes__checkbox__name">CVC </span>
+                              </label>
+                            </div>
+                          </label>
+                          <label class="default-label"><span class="default-label__title default-label__title_fz10">Электронная почта</span>
+                            <input class="default-input" placeholder="">
+                          </label>
+                          <button class="btn" disabled>Скачать Отчет</button>
+                        </div>
+                        <p class="notice">Готово! Отчет успешно отправлен на почту mshaverov@gmail.com</p>
+                      </div>
+                    </div>
+                <report></report>
               </div>
             </div>
           </div>
         </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.2.1/dist/chart.min.js"></script>
-    <script src="/assets/js/common.js?v-1622658967564"></script><script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="/assets/js/common.js?v-1622705450589"></script><script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </body>

@@ -1,3 +1,90 @@
+mixin report()
+    .skeleton__right__head.skeleton__head_right
+        .skeleton__right__side
+            button(
+                onclick="toggleMobileMenu(this)"
+            ).skeleton__burger
+                span.skeleton__burger__line
+            p.skeleton__headline 
+                span Медицина 24/7
+                span ООО "ССМЦ" 
+                span Медицина 24/7 на Трубной
+        .skeleton__right__side
+            a(href="#").skeleton__logout.skeleton__logout_mobile 
+                <svg class="skeleton__logout__icon" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2.00276 0C0.893543 0 0 0.894276 0 1.99742V17.0026C0 18.1091 0.896666 19 2.00276 19H10.9972C12.1065 19 13 18.1057 13 17.0026V1.99742C13 0.890925 12.1033 0 10.9972 0H2.00276ZM1 17.0026V1.99742C1 1.44584 1.44655 1 2.00276 1H10.9972C11.5531 1 12 1.44523 12 1.99742V17.0026C12 17.5542 11.5534 18 10.9972 18H2.00276C1.44693 18 1 17.5548 1 17.0026Z" fill="#70C9B9"/>
+                    <rect x="7" y="9" width="12" height="1" fill="#70C9B9"/>
+                    <path d="M16 6L19.5 9.5L16 13" stroke="#70C9B9"/>
+                </svg>
+    .skeleton__right__content
+        .reports-page.default-wrap-page
+            .reports-page__top
+                h1.headline-page Отчеты
+                p.reports-page__description Здесь можно скачать отчет — расчет выплат докторам за проведение онлайн-консультаций на платформе Мой Доктор. <br>Отчет за предыдущий месяц доступен с 3-го числа следующего месяца.
+                .default-labels
+                    div.default-label
+                        span.default-label__title.default-label__title_fz10 Выберите медцентр
+                        label.default-select
+                            select(
+                            ).default-select__select
+                                option(
+                                    disabled
+                                ) Выбрать
+                                option 1
+                                option 2
+                    div.default-label
+                        span.default-label__title.default-label__title_fz10 Выберите юр.лицо
+                        label.default-select
+                            select(
+                            ).default-select__select
+                                option(
+                                    disabled
+                                ) Выбрать
+                                option 1
+                                option 2
+                    div.default-label
+                        span.default-label__title.default-label__title_fz10 Выберите филиал
+                        label.default-select
+                            select(
+                            ).default-select__select
+                                option(
+                                    disabled
+                                ) Выбрать
+                                option 1
+                                option 2
+                label.default-label
+                    span.default-label__title.default-label__title_fz10 Выберите период
+                    .default-selects
+                        label.default-select.default-select_short
+                            span.default-select__label с
+                            select(
+                            ).default-select__select
+                                option 1
+                                option 2
+                        label.default-select.default-select_short
+                            span.default-select__label по
+                            select(
+                            ).default-select__select
+                                option 2
+                                option 1
+                label.default-label
+                    span.default-label__title.default-label__title_fz10 Формат отчета
+                    .default-checkboxes
+                        label.default-checkboxes__checkbox
+                            input(type="radio" name="1" checked).default-checkboxes__checkbox__input
+                            span.default-checkboxes__checkbox__square
+                            span.default-checkboxes__checkbox__name XLS 
+                        label.default-checkboxes__checkbox
+                            input(type="radio" name="1").default-checkboxes__checkbox__input
+                            span.default-checkboxes__checkbox__square
+                            span.default-checkboxes__checkbox__name CVC 
+                label.default-label
+                    span.default-label__title.default-label__title_fz10 Электронная почта
+                    input(placeholder="").default-input
+                button(
+                    disabled
+                ).btn Скачать Отчет
+            p.notice Готово! Отчет успешно отправлен на почту mshaverov@gmail.com
 mixin main()
     .skeleton__right__head.skeleton__head_right
         .skeleton__right__side
@@ -245,93 +332,7 @@ mixin main()
                                     .dashboard__devices__label.dashboard__devices__label_desktop компьютер
                                     .dashboard__devices__label.dashboard__devices__label_phone смартфон
                             <canvas class="dashboard__chart dashboard__chart_3" id="myChart3"></canvas>
-mixin report()
-    .skeleton__right__head.skeleton__head_right
-        .skeleton__right__side
-            button(
-                onclick="toggleMobileMenu(this)"
-            ).skeleton__burger
-                span.skeleton__burger__line
-            p.skeleton__headline 
-                span Медицина 24/7
-                span ООО "ССМЦ" 
-                span Медицина 24/7 на Трубной
-        .skeleton__right__side
-            a(href="#").skeleton__logout.skeleton__logout_mobile 
-                <svg class="skeleton__logout__icon" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2.00276 0C0.893543 0 0 0.894276 0 1.99742V17.0026C0 18.1091 0.896666 19 2.00276 19H10.9972C12.1065 19 13 18.1057 13 17.0026V1.99742C13 0.890925 12.1033 0 10.9972 0H2.00276ZM1 17.0026V1.99742C1 1.44584 1.44655 1 2.00276 1H10.9972C11.5531 1 12 1.44523 12 1.99742V17.0026C12 17.5542 11.5534 18 10.9972 18H2.00276C1.44693 18 1 17.5548 1 17.0026Z" fill="#70C9B9"/>
-                    <rect x="7" y="9" width="12" height="1" fill="#70C9B9"/>
-                    <path d="M16 6L19.5 9.5L16 13" stroke="#70C9B9"/>
-                </svg>
-    .skeleton__right__content
-        .reports-page.default-wrap-page
-            .reports-page__top
-                h1.headline-page Отчеты
-                p.reports-page__description Здесь можно скачать отчет — расчет выплат докторам за проведение онлайн-консультаций на платформе Мой Доктор. <br>Отчет за предыдущий месяц доступен с 3-го числа следующего месяца.
-                .default-labels
-                    div.default-label
-                        span.default-label__title.default-label__title_fz10 Выберите медцентр
-                        label.default-select
-                            select(
-                            ).default-select__select
-                                option(
-                                    disabled
-                                ) Выбрать
-                                option 1
-                                option 2
-                    div.default-label
-                        span.default-label__title.default-label__title_fz10 Выберите юр.лицо
-                        label.default-select
-                            select(
-                            ).default-select__select
-                                option(
-                                    disabled
-                                ) Выбрать
-                                option 1
-                                option 2
-                    div.default-label
-                        span.default-label__title.default-label__title_fz10 Выберите филиал
-                        label.default-select
-                            select(
-                            ).default-select__select
-                                option(
-                                    disabled
-                                ) Выбрать
-                                option 1
-                                option 2
-                label.default-label
-                    span.default-label__title.default-label__title_fz10 Выберите период
-                    .default-selects
-                        label.default-select.default-select_short
-                            span.default-select__label с
-                            select(
-                            ).default-select__select
-                                option 1
-                                option 2
-                        label.default-select.default-select_short
-                            span.default-select__label по
-                            select(
-                            ).default-select__select
-                                option 2
-                                option 1
-                label.default-label
-                    span.default-label__title.default-label__title_fz10 Формат отчета
-                    .default-checkboxes
-                        label.default-checkboxes__checkbox
-                            input(type="radio" name="1" checked).default-checkboxes__checkbox__input
-                            span.default-checkboxes__checkbox__square
-                            span.default-checkboxes__checkbox__name XLS 
-                        label.default-checkboxes__checkbox
-                            input(type="radio" name="1").default-checkboxes__checkbox__input
-                            span.default-checkboxes__checkbox__square
-                            span.default-checkboxes__checkbox__name CVC 
-                label.default-label
-                    span.default-label__title.default-label__title_fz10 Электронная почта
-                    input(placeholder="").default-input
-                button(
-                    disabled
-                ).btn Скачать Отчет
-            p.notice Готово! Отчет успешно отправлен на почту mshaverov@gmail.com
+
 mixin centers()
     .skeleton__right__head.skeleton__head_right
         .skeleton__right__side
@@ -1152,6 +1153,7 @@ mixin skeleton(params)
                     - if (page == "report") {
                         +report()
                     - }
+                    #{page}
                     - if (page == "centers") {
                         +centers()
                     - }
